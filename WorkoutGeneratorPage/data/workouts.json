@@ -1,0 +1,163 @@
+{
+  "shoulders": {
+    "dumbbells": [
+      { "name": "Dumbbell Shoulder Press", "sets": "3-4", "reps": "8-12", "rest": "60-90s", "video": "wO0l5jW2NtQ?si=0Z61RYLm2d1oxHMp" },
+      { "name": "Lateral Raises", "sets": "3", "reps": "12-15", "rest": "60s", "video": "lnVEvYCBGDo?si=98u-S3kBcY3MYEVJ" }
+    ],
+    "resistance-bands": [
+      { "name": "Band Shoulder Press", "sets": "3-4", "reps": "10-15", "rest": "60s", "video": "1-VfJqjYquQ?si=FHRHpeGRo1KflAOd" },
+      { "name": "Band Lateral Raises", "sets": "3", "reps": "12-15", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "kettlebell": [
+      { "name": "Kettlebell Press", "sets": "3", "reps": "8-10", "rest": "60s", "video": "uzPQm5zgPXo?si=ELORFABa4FgQM5Yr" },
+      { "name": "Kettlebell Upright Row", "sets": "3", "reps": "10-12", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "barbell": [
+      { "name": "Barbell Overhead Press", "sets": "3-4", "reps": "6-10", "rest": "90s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" },
+      { "name": "Barbell Front Raise", "sets": "3", "reps": "10-12", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "stability-ball": [
+      { "name": "Ball Shoulder Press", "sets": "3", "reps": "10-12", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" },
+      { "name": "Ball Lateral Raise", "sets": "3", "reps": "12-15", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "jump-rope": [
+      { "name": "Jump Rope Warm-Up", "sets": "1", "reps": "2-3 min", "rest": "30s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "pull-up-bar": [
+      { "name": "Assisted Pull-Up (Shoulder Focus)", "sets": "3", "reps": "6-10", "rest": "90s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ]
+  },
+
+  "back": {
+    "dumbbells": [
+      { "name": "Dumbbell Rows", "sets": "3-4", "reps": "8-12", "rest": "60-90s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" },
+      { "name": "Dumbbell Pullovers", "sets": "3", "reps": "10-15", "rest": "60s" },
+      { "name": "Single-Arm Dumbbell Rows", "sets": "3-4", "reps": "10-12 each side", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "resistance-bands": [
+      { "name": "Bent Over Band Rows", "sets": "3-4", "reps": "12-15", "rest": "60s" },
+      { "name": "Seated Band Rows", "sets": "3", "reps": "12-15", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "kettlebell": [
+      { "name": "Kettlebell Deadlift", "sets": "3", "reps": "10-12", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" },
+      { "name": "Kettlebell Rows", "sets": "3", "reps": "10-12", "rest": "60s" }
+    ],
+    "barbell": [
+      { "name": "Barbell Deadlift", "sets": "3-4", "reps": "6-10", "rest": "90s" },
+      { "name": "Barbell Bent Over Row", "sets": "3", "reps": "8-12", "rest": "60s" }
+    ],
+    "stability-ball": [
+      { "name": "Back Extensions on Ball", "sets": "3", "reps": "15", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "jump-rope": [
+      { "name": "Jump Rope Cardio", "sets": "1", "reps": "3 min", "rest": "30s" }
+    ],
+    "pull-up-bar": [
+      { "name": "Pull-Ups", "sets": "3", "reps": "6-10", "rest": "90s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ]
+  },
+
+  "biceps": {
+    "dumbbells": [
+      { "name": "Dumbbell Bicep Curl", "sets": "3", "reps": "10-15", "rest": "60s" },
+      { "name": "Hammer Curl", "sets": "3", "reps": "10-12", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "resistance-bands": [
+      { "name": "Band Bicep Curl", "sets": "3", "reps": "12-15", "rest": "60s" }
+    ],
+    "kettlebell": [
+      { "name": "Kettlebell Curl", "sets": "3", "reps": "10-12", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "barbell": [
+      { "name": "Barbell Curl", "sets": "3", "reps": "8-12", "rest": "60s" }
+    ],
+    "stability-ball": [
+      { "name": "Ball Seated Curl", "sets": "3", "reps": "12", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "jump-rope": [
+      { "name": "Jump Rope Intervals", "sets": "1", "reps": "2 min", "rest": "30s" }
+    ],
+    "pull-up-bar": [
+      { "name": "Chin-Ups", "sets": "3", "reps": "6-10", "rest": "90s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ]
+  },
+
+  "abs": {
+    "dumbbells": [
+      { "name": "Weighted Sit-Ups", "sets": "3", "reps": "15", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "resistance-bands": [
+      { "name": "Band Crunches", "sets": "3", "reps": "15", "rest": "60s" }
+    ],
+    "kettlebell": [
+      { "name": "Kettlebell Russian Twists", "sets": "3", "reps": "20", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "barbell": [
+      { "name": "Barbell Rollouts", "sets": "3", "reps": "10", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "stability-ball": [
+      { "name": "Ball Crunches", "sets": "3", "reps": "15", "rest": "60s" }
+    ],
+    "jump-rope": [
+      { "name": "Jump Rope Core Burn", "sets": "1", "reps": "3 min", "rest": "30s" }
+    ],
+    "pull-up-bar": [
+      { "name": "Hanging Leg Raises", "sets": "3", "reps": "10-15", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ]
+  },
+
+  "full-body": {
+    "dumbbells": [
+      { "name": "Dumbbell Thrusters", "sets": "3", "reps": "10", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "resistance-bands": [
+      { "name": "Band Squat to Press", "sets": "3", "reps": "12", "rest": "60s" }
+    ],
+    "kettlebell": [
+      { "name": "Kettlebell Swings", "sets": "3", "reps": "15", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "barbell": [
+      { "name": "Barbell Complex", "sets": "3", "reps": "6 moves x 6 reps", "rest": "90s" }
+    ],
+    "stability-ball": [
+      { "name": "Ball Pike to Push-Up", "sets": "3", "reps": "10", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ],
+    "jump-rope": [
+      { "name": "Jump Rope HIIT", "sets": "3", "reps": "1 min on/30s off", "rest": "30s" }
+    ],
+    "pull-up-bar": [
+      { "name": "Burpee to Pull-Up", "sets": "3", "reps": "8", "rest": "90s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+    ]
+  },
+  "cardio": {
+  "dumbbells": [
+    { "name": "Dumbbell Squat to Press", "sets": "3", "reps": "15", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" },
+    { "name": "Dumbbell High Knees", "sets": "3", "reps": "30s", "rest": "30s" }
+  ],
+  "resistance-bands": [
+    { "name": "Band Jump Squats", "sets": "3", "reps": "15", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" },
+    { "name": "Band Skaters", "sets": "3", "reps": "20", "rest": "60s" }
+  ],
+  "kettlebell": [
+    { "name": "Kettlebell Swings", "sets": "3", "reps": "20", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" },
+    { "name": "Kettlebell Snatch Intervals", "sets": "3", "reps": "30s each arm", "rest": "60s" }
+  ],
+  "barbell": [
+    { "name": "Barbell Complex (Cardio Style)", "sets": "3", "reps": "6 moves x 6 reps", "rest": "90s" },
+    { "name": "Barbell Thrusters", "sets": "3", "reps": "12", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+  ],
+  "stability-ball": [
+    { "name": "Ball Mountain Climbers", "sets": "3", "reps": "30s", "rest": "30s" },
+    { "name": "Ball Burpees", "sets": "3", "reps": "10", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+  ],
+  "jump-rope": [
+    { "name": "Jump Rope Intervals", "sets": "5", "reps": "1 min on / 30s off", "rest": "30s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" },
+    { "name": "Jump Rope Tabata", "sets": "8", "reps": "20s on / 10s off", "rest": "10s" }
+  ],
+  "pull-up-bar": [
+    { "name": "Burpee to Pull-Up", "sets": "3", "reps": "8", "rest": "90s" },
+    { "name": "Hanging Knee Tucks (Cardio Pace)", "sets": "3", "reps": "15", "rest": "60s", "video": "G8NlkR3_uCk?si=tKom3cXum_kY8hBg" }
+  ]
+}
+
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="GreenBite" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" href="./Homepage/styling/reset_style.css" type="text/css">
+    <link rel="stylesheet" href="./Homepage/styling/style.css" type="text/css">
+    <link rel="stylesheet" href="./ContactandFeedbackPage/styling5/style5.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet">
+    <title>GreenBite</title>
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <img src="./Homepage/images/header_logo.png" alt="the logo of GreenBite - a green apple with a bite taken out of it">
+    </div>
+    <!-- hamburger menu -->
+    <button class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./healthy_recipes.html">Healthy Recipes</a></li>
+            <li><a href="./calorie_nutrition_calculator.html">Calorie & Nutrition Calculator</a></li>
+            <li><a href="./workout_generator.html">Workout Generator</a></li>
+            <li><a href="./mindfullness_page.html">Mindfulness Page</a></li>
+            <li><a href="./contact_feedback.html">Contact and Feedback</a></li>
+        </ul>
+        <!-- <a href="#">Home</a>
+        <a href="#">Healthy Recipes</a>
+        <a href="#">Calorie & Nutrition Calculator</a>
+        <a href="#">Workout Generator</a>
+        <a href="#">Mindfulness Page</a>
+        <a href="#">Contact and Feedback</a> -->
+    </nav>
+    </header>
+    <main>
+        <section class="main-container-contact">
+            <!-- Page Title -->
+            <section class="page-title">
+                <h1>Contact us and give us feedback!</h1>
+                <p>We'd love to hear from you. Send us a message or feedback about your experience.</p>
+            </section>
+            <aside class="map-embed">
+                 <!-- Map -->
+                   <h2>Our Location</h2>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2092.6366163694784!2d26.6838667!3d58.365799900000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eb370e40377dd3%3A0xc1a02b13e955beed!2sGreen%20Bite!5e0!3m2!1sen!2slk!4v1758261429648!5m2!1sen!2slk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                    title="GreenBite Location">
+                    </iframe>
+                
+                </div>
+            </aside>
+            <article class="contact-form">
+                <h2>Send us a Message</h2>
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name" autocomplete="name">
+                        <div class="error" id="nameError">Please enter your name</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" autocomplete="email">
+                        <div class="error" id="emailError">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-control" rows="5" placeholder="Type your message here"></textarea>
+                        <div class="error" id="messageError">Please enter your message</div>
+                    </div>
+                    
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                
+                <!-- Confirmation Message -->
+                <div class="confirmation" id="confirmation">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank You for Your Feedback!</h3>
+                    <p>We appreciate you taking the time to contact us. Your message has been received.</p>
+                </div>
+            </article>
+            <section class="FAQs">
+                <!-- FAQ Section -->
+                 <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is this recommended for children?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We've catered the site for older audiences and the workouts and recipes are more adult oriented.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can we recommend you recipes?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Certainly! Send us a message with the recipes you would like to share with us and we'll give them a try before adding it to the collection.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you have vegan recipes?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We have a wide variety of vegan and plant-based recipes on our page.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is the use of this website free?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Since our organization is non profit, you can use all the services of our website for free!</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are the workouts specially created?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! the workout plans are structures to give you randomized workouts to try, all of which have been proven to be 100% effective.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GreenBite</h3>
+                <p>Your healthy living companion for nutrition, fitness, and mindfulness.</p>
+                <div class="social-icons">
+                    <!-- socials dont exist yet so links dont work actually -->
+                    <a href="#" aria-label="Facebook"><span><img src="./Homepage/images/facebook-icon.png" alt="facebook logo"></span></a>
+                    <a href="#" aria-label="Instagram"><span><img src="./Homepage/images/instagram_icon.png" alt="instagram icon"></span></a>
+                    <a href="#" aria-label="Twitter"><span><img src="./Homepage/images/twitter_icon.png" alt="twitter icon"></span></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./healthy_recipes.html">Healthy Recipes</a></li>
+                    <li><a href="./calorie_nutrition_calculator.html">Calorie Calculator</a></li>
+                    <li><a href="./workout_generator.html">Workout Generator</a></li>
+                    <li><a href="./mindfullness_page.html">Mindfulness</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe for weekly health tips and updates</p>
+                <form id="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="subscription-message"></p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy;2025 GreenBite. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="./ContactandFeedbackPage/scripting5/script5.js"></script>
+    <script src="./Homepage/scripting/script.js"></script>
+</body>
+</html>

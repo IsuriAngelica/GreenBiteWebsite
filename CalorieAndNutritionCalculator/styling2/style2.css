@@ -1,0 +1,495 @@
+.header-content img {
+    height: 100px;
+}
+
+.grid-container-calc {
+    display: grid;
+    grid-template-columns: 1fr 9fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item-left-calc {
+    background-color: rgb(244, 255, 251);
+    padding: 20px;
+    color: rgb(14, 62, 45);
+    border-radius: 10px;
+    box-shadow:0 5px 11px rgba(0, 0, 0, 0.203);
+}
+
+
+form input[type="submit"], 
+form input[type="reset"] {
+    background-color: rgb(28, 144, 103);
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background-color: rgb(44, 221, 159);
+}
+
+table, th, td {
+    padding: 5px;
+    border: 2px solid rgb(143, 211, 187);
+    border-collapse: collapse;
+    width: 20% 80%;
+    background-color: rgb(232, 255, 247);
+}
+
+
+th {
+    background-color: rgb(14, 91, 64);
+    color: white;
+    margin-top: 5px;
+}
+
+
+
+.form-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+form {
+    padding: 10px;
+    margin: 5px;
+    gap: 10px;
+}
+
+.description-calc {
+    background-image: url('./backgrounds2/apple-measuring-tape.png');
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, select{
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(143, 211, 187);
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./backgrounds2/calc-background-collage.png');
+}
+
+.flex-items-calc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Results Container */
+.results-hidden {
+    display: none;
+}
+
+.results-visible {
+    display: block;
+    margin-top: 30px;
+    background-color: rgb(232, 255, 247);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(14, 91, 64);
+}
+
+.results-content h2 {
+    color: rgb(14, 91, 64);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result-item {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-item h3 {
+    color: rgb(14, 91, 64);
+    margin-bottom: 10px;
+}
+
+.result-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(28, 144, 103);
+    margin: 10px 0;
+}
+
+.macros-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.macro-item {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(244, 255, 251);
+    border-radius: 8px;
+}
+
+.macro-item h4 {
+    color: rgb(14, 91, 64);
+    margin-bottom: 5px;
+}
+
+.back-btn {
+    background-color: rgb(28, 144, 103);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: rgb(44, 221, 159);
+}
+
+/* Animation for results */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.results-visible {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-container-calc {
+        grid-template-columns: 1fr;
+    }
+}
+
+input[type="radio"] {
+    width: auto; 
+    margin-right: 5px;
+}
+
+.gender-div {
+    margin: 5px 5px 5px 0;
+}
+
+fieldset {
+    border-color: rgb(14, 91, 64);
+    border-radius: 10px;
+}
+
+/* ========== MOBILE RESPONSIVENESS ========== */
+/* This will only change things on mobile screens */
+@media (max-width: 768px) {
+    .grid-container-calc {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .grid-item-left-edge-calc {
+        display: none;
+    }
+    
+    .form-grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .flex-items-calc {
+        gap: 15px;
+    }
+    
+    .description-calc {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    table, th, td {
+        font-size: 14px;
+        padding: 4px;
+    }
+    
+    .macros-container {
+        flex-direction: column;
+    }
+    
+    .macro-item {
+        min-width: 100%;
+        margin: 5px 0;
+    }
+    
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    form input[type="submit"], 
+    form input[type="reset"] {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .gender-div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .gender-div label[for="gender"] {
+        width: 100%;
+    }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+    .grid-item-left-calc {
+        padding: 15px;
+    }
+    
+    legend.title-calc h1 {
+        font-size: 1.2rem;
+        padding: 8px 15px;
+    }
+    
+    .results-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .result-value {
+        font-size: 20px;
+    }
+    
+    .back-btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Make sure images don't overflow on mobile */
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .logo img {
+        max-height: 60px;
+    }
+}
+
+/* Prevent horizontal scrolling on mobile */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    main {
+        width: 100%;
+    }
+}
+
+.plate-collage {
+    border-radius: 50%;
+    opacity: 0.9;
+    margin: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plate-collage:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.447);
+}
+
+/* ===== NEW RESULTS STYLES - Animated Counters & Progress Bars ===== */
+.macro-note {
+    text-align: center;
+    font-style: italic;
+    color: rgb(101, 101, 101);
+    margin-bottom: 20px;
+}
+
+.macro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.macro-header h4 {
+    margin: 0;
+    color: rgb(14, 91, 64);
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: rgb(232, 255, 247);
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgb(28, 144, 103), rgb(44, 221, 159));
+    width: 0%;
+    transition: width 1.5s ease-in-out;
+}
+
+.macro-percent {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(14, 91, 64);
+    margin: 5px 0 0 0;
+}
+
+/* Counter Animation */
+.counter {
+    font-weight: bold;
+    color: rgb(28, 144, 103);
+}
+
+/* ===== NEW LAYOUT - Cards & Stacked Macros ===== */
+.results-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.result-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.result-item {
+    margin-bottom: 25px;
+}
+
+.result-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(28, 144, 103);
+    margin: 10px 0 5px 0;
+    line-height: 1;
+}
+
+.result-desc {
+    color: rgb(101, 101, 101);
+    font-size: 0.9rem;
+    margin: 5px 0 0 0;
+}
+
+/* Stacked Macro Rows */
+.macro-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.macro-icon {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+}
+
+.macro-details {
+    flex-grow: 1;
+}
+
+.macro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.macro-header h4 {
+    margin: 0;
+    color: rgb(14, 91, 64);
+}
+
+/* Different Green Colors for Macros */
+.carbs-fill {
+    background: linear-gradient(90deg, rgb(227, 158, 158), rgb(220, 46, 46));
+}
+.protein-fill {
+    background: linear-gradient(90deg, rgb(227, 217, 158), rgb(220, 171, 46));
+}
+.fat-fill {
+    background: linear-gradient(90deg, rgb(158, 225, 227), rgb(46, 220, 217));
+}
+
+/* Responsive Adjustments for New Layout */
+@media (max-width: 768px) {
+    .results-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .result-card {
+        min-width: auto;
+    }
+    .macro-row {
+        gap: 10px;
+    }
+}
+
+.gender-fieldset .gender-options{
+    
+    padding-left: 10px;
+}
+.gender-fieldset {
+    margin: 20px;
+    border-color: rgba(108, 222, 182, 0.53);
+}
+
+ form input[type="radio"] {
+    accent-color: rgb(5, 59, 33);
+}
+

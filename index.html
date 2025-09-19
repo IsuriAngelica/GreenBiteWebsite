@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="GreenBite" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" href="./Homepage/styling/reset_style.css" type="text/css">
+    <link rel="stylesheet" href="./Homepage/styling/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet">
+    <title>GreenBite</title>
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <img src="./Homepage/images/header_logo.png" alt="the logo of GreenBite - a green apple with a bite taken out of it">
+    </div>
+    <!-- hamburger menu -->
+    <button class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./healthy_recipes.html">Healthy Recipes</a></li>
+            <li><a href="./calorie_nutrition_calculator.html">Calorie & Nutrition Calculator</a></li>
+            <li><a href="./workout_generator.html">Workout Generator</a></li>
+            <li><a href="./mindfullness_page.html">Mindfulness Page</a></li>
+            <li><a href="./contact_feedback.html">Contact and Feedback</a></li>
+        </ul>
+        <!-- <a href="#">Home</a>
+        <a href="#">Healthy Recipes</a>
+        <a href="#">Calorie & Nutrition Calculator</a>
+        <a href="#">Workout Generator</a>
+        <a href="#">Mindfulness Page</a>
+        <a href="#">Contact and Feedback</a> -->
+    </nav>
+    </header>
+    <main>
+        <!--<img id="homepageCollage" src="./Homepage/images/homepage_collage.zpng" alt="a collage of healthy foods, a person exercising, and a serene nature scene">-->
+        <section class="grid-container-hero">
+            <!-- Add mobile-hidden class to image container -->
+            <article class="image-container mobile-hidden">
+                <img src="./Homepage/images/girl-with-apples.png" alt="an african american girl holding two green apples and one red appple" class="Hero-Image">
+            </article>
+            
+            <article class="hero-content">
+                <article class="welcome-text">
+                    <h1>Welcome to GreenBite</h1>
+                    <p class="app-tagline">Your healthy living companion</p>
+                    <p>Discover recipes, track nutrition, generate workouts, and find peace through mindfulness.</p>
+                    
+                    <!-- Hidden content that can be expanded -->
+                    <div class="expandable-content">
+                        <p>Working out daily, finding time to calm your mind, meticulously looking for the most nutritious meals while trying to calculate the number of calories you've consumed within the day; it's hard work and we know it. Let GreenBite be your healthy living buddy as you achieve your goals in staying fit and happy.</p>
+                    </div>
+                    
+                </article>
+                
+                <article class="quote-container">
+                    <div class="top-bar" id="quote">
+                        <p id="quote-text">"Eat healthy, live healthy"</p>
+                    </div>
+                </article>
+            </article>
+        </section>
+        <section>
+            <article class="container-daily-tips">
+                <div class="flex-item" id="daily-tips">
+                    <h2>Tips of the Day</h2>
+                    <div id="daily-tip-content">
+                        <!-- JavaScript will populate 4 tips here -->
+                    </div>
+                </div>
+            </article>
+            <section class="home-content-section">
+            <h1>About Us</h1>
+            <p>Our aim is to create a platform that will become your healthy habit buddy! Improve your life one small step at a time with personalized workouts, healthy meals, calorie tracking and daily moments of peaceful mindfullness.</p>
+            <section class="grid-container-articles">
+                <a href="./healthy_recipes.html">
+                <article class="article-preview"> 
+                    <h3>Healthy Eating Habits</h3>
+                    <p>Use our vast collection of healthy recipes to find your favourite picks! A fun way to add nutrition to our diet.</p>
+                    <img src="./Homepage/images/egg-avo-toast-plated.jpg" alt="toast with avocado and half boiled egg">
+                </article>
+                </a>
+                <a href="./workout_generator.html">
+                <article class="article-preview">
+                    <h3>Effective Workouts</h3>
+                    <p>Create a workout plan specifically tailored for you. No stress, start small, baby steps are the key to success!</p>
+                    <img src="./Homepage/images/weight-lifting.jpg" alt="rows of dumbbells in a gym">
+                </article>
+                </a>
+                <a href="./mindfullness_page.html">
+                <article class="article-preview">
+                    <h3>Mental Wellness</h3>
+                    <p>Take a small moment of your day to relax with our virtual environment made just for you! Your quiet breathing corner awaits.</p>
+                    <img src="./Homepage/images/girl-writing.jpg" alt="a girl with a book and a quill staring wistfully out of a window">
+                </article>
+                </a>
+            </section>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GreenBite</h3>
+                <p>Your healthy living companion for nutrition, fitness, and mindfulness.</p>
+                <div class="social-icons">
+                    <!-- socials dont exist yet so links dont work actually -->
+                    <a href="#" aria-label="Facebook"><span><img src="./Homepage/images/facebook-icon.png" alt="facebook logo"></span></a>
+                    <a href="#" aria-label="Instagram"><span><img src="./Homepage/images/instagram_icon.png" alt="instagram icon"></span></a>
+                    <a href="#" aria-label="Twitter"><span><img src="./Homepage/images/twitter_icon.png" alt="twitter icon"></span></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./healthy_recipes.html">Healthy Recipes</a></li>
+                    <li><a href="./calorie_nutrition_calculator.html">Calorie Calculator</a></li>
+                    <li><a href="./workout_generator.html">Workout Generator</a></li>
+                    <li><a href="./mindfullness_page.html">Mindfulness</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe for weekly health tips and updates</p>
+                <form id="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="subscription-message"></p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy;2025 GreenBite. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="./Homepage/scripting/script.js"></script>
+</body>
+</html>

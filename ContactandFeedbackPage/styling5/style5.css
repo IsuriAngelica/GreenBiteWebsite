@@ -1,0 +1,264 @@
+:root {
+  --pallete-color-headings: rgb(8, 43, 31);
+  --pallete-color-backgounds: rgb(28, 129, 93);
+  --pallete-color-footer: rgb(58, 109, 92);
+  --pallete-color-04: rgb(8, 43, 31);
+  --pallete-color-light-backgound: rgb(232, 255, 247);
+  --pallete-color-recipe-page: rgba(28, 129, 94, 0.756);
+  --contact-headings: rgb(3, 138, 88);
+}
+
+
+/* Contact Page Specific Styles */
+        .main-container-contact {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 30px;
+            grid-template-areas:
+                "page-title page-title"
+                "map-embed contact-form"  
+                "FAQs FAQs";
+        }
+        
+        @media (max-width: 992px) {
+            .main-container-contact {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "page-title"
+                    "map-embed"      
+                    "contact-form"
+                    "FAQs";
+            }
+        }
+        
+        .page-title {
+            grid-area: page-title;
+            background-color: rgba(28, 129, 94, 0.92);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5)
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            color: white;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .contact-form {
+            grid-area: contact-form;
+            background: var(--pallete-color-light-backgound);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-form h2 {
+            color: var(--contact-headings);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 105, 68, 0.605);
+        }
+        
+        .map-embed {
+            grid-area: map-embed;
+            background: var(--pallete-color-light-backgound);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .map-embed h2 {
+            color: var(--contact-headings);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 105, 68, 0.605);
+        }
+        
+        .map {
+            height: 400px;
+            background-color: rgb(229, 248, 241);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .map-placeholder {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23C8E6C9"/></svg>');
+            background-size: cover;
+        }
+        
+        .map-placeholder i {
+            font-size: 50px;
+            color: rgb(61, 147, 117);
+            margin-bottom: 15px;
+        }
+        
+        .map-placeholder p {
+            color: #555;
+            text-align: center;
+            max-width: 80%;
+        }
+        
+        .FAQs {
+            grid-area: FAQs;
+            background: var(--pallete-color-light-backgound);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .FAQs h2 {
+            color: var(--contact-headings);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 105, 68, 0.605);
+        }
+        
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: rgb(73, 175, 139);
+            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+        }
+        
+        .error {
+            color: #d32f2f;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .btn {
+            background-color: rgb(28, 144, 103);  
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: rgb(44, 221, 159);   
+            transform: translateY(-2px);
+        }
+        
+        /* FAQ Styles */
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 15px;
+            background: rgb(197, 242, 226);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: rgb(231, 249, 243);
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-answer {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: white;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 15px;
+        }
+        
+        /* Confirmation Message */
+        .confirmation {
+            display: none;
+            background: rgb(230, 250, 243);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            border-left: 4px solid rgb(78, 184, 147);
+        }
+        
+        .confirmation i {
+            font-size: 40px;
+            color: rgb(67, 163, 129);
+            margin-bottom: 15px;
+        }
+        
+        .confirmation h3 {
+            color: rgb(52, 164, 125);
+            margin-bottom: 10px;
+        }
+
+main {
+    background-image: url('./backgrounds5/contact-collage.png');
+}
+
+.map-container {
+            height: 400px;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+        }

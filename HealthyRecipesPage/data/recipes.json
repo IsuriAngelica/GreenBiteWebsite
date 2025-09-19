@@ -1,0 +1,386 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Leveled Up Avocado Toast",
+      "category": "meal",
+      "image": "./HealthyRecipesPage/images1/Meals/recipe_meal01.jpg",
+      "alt": "toast with half boiled eggs and avocado spread with pomegranate seeds",
+      "description": "Avocado toast but with a little twist and a touch of unique flavor and added protein",
+      "keywords": ["toast", "avocado", "quick", "breakfast", "healthy"],
+      "ingredients": [
+        "2 slices whole grain bread",
+        "1 ripe avocado",
+        "2 soft-boiled eggs",
+        "2 tbsp pomegranate seeds",
+        "Salt and pepper to taste",
+        "Red pepper flakes (optional)",
+        "Fresh cilantro for garnish"
+      ],
+      "instructions": [
+        "Toast the bread until golden and crispy.",
+        "Mash the avocado and spread evenly on the toast.",
+        "Slice the soft-boiled eggs in half and place on top.",
+        "Sprinkle with pomegranate seeds, salt, pepper, and red pepper flakes if desired.",
+        "Garnish with cilantro and serve immediately."
+      ],
+      "prepTime": "10 minutes",
+      "cookTime": "5 minutes",
+      "servings": 2,
+      "nutrition": { "calories": "320", "protein": "12g", "carbs": "28g", "fat": "18g", "fiber": "8g" }
+    },
+    {
+      "id": 2,
+      "title": "Spinach Tomato Quiche",
+      "category": "meal",
+      "image": "./HealthyRecipesPage/images1/Meals/recipe_meal02.jpg",
+      "alt": "a cheese, egg and spinach quiche topped with half cut tomatoes",
+      "description": "The combination of protein and minerals in a classic recipe made healthy",
+      "keywords": ["spinach", "tomato", "quiche", "protein", "healthy"],
+      "ingredients": [
+        "1 prepared whole-wheat pie crust",
+        "4 large eggs",
+        "1 cup milk",
+        "1 cup fresh spinach, chopped",
+        "1/2 cup cherry tomatoes, halved",
+        "1/2 cup shredded mozzarella",
+        "Salt and pepper to taste"
+      ],
+      "instructions": [
+        "Preheat oven to 375°F (190°C).",
+        "Whisk eggs and milk in a bowl, season with salt and pepper.",
+        "Spread spinach and half the cheese on the crust.",
+        "Pour egg mixture over spinach, top with tomatoes and remaining cheese.",
+        "Bake for 35–40 minutes until set and golden. Cool slightly before slicing."
+      ],
+      "prepTime": "15 minutes",
+      "cookTime": "40 minutes",
+      "servings": 6,
+      "nutrition": { "calories": "250", "protein": "12g", "carbs": "22g", "fat": "12g", "fiber": "3g" }
+    },
+    {
+      "id": 3,
+      "title": "Creamy Coconut Lentil Curry",
+      "category": "meal",
+      "image": "./HealthyRecipesPage/images1/Meals/recipe_meal03.jpg",
+      "alt": "coconut and lentil curry in a bowl of white rice",
+      "description": "Plant-based and packed with protein and fiber, powered by lentils and nourishing coconut milk",
+      "keywords": ["coconut", "lentil", "curry", "fiber", "lunch"],
+      "ingredients": [
+        "1 cup red lentils, rinsed",
+        "1 can coconut milk",
+        "2 cups vegetable broth",
+        "1 onion, diced",
+        "2 cloves garlic, minced",
+        "1 tbsp curry powder",
+        "1 tsp turmeric",
+        "Salt and pepper to taste",
+        "1 tbsp olive oil"
+      ],
+      "instructions": [
+        "Heat olive oil in a pot over medium heat. Sauté onion and garlic until fragrant.",
+        "Add curry powder and turmeric; cook for 1 minute.",
+        "Stir in lentils, coconut milk, and broth. Bring to a boil.",
+        "Reduce heat and simmer for 20–25 minutes until lentils are tender.",
+        "Season with salt and pepper. Serve hot with rice."
+      ],
+      "prepTime": "10 minutes",
+      "cookTime": "25 minutes",
+      "servings": 4,
+      "nutrition": { "calories": "280", "protein": "12g", "carbs": "34g", "fat": "10g", "fiber": "9g" }
+    },
+    {
+      "id": 4,
+      "title": "Cream Cheese and Peach On Toast",
+      "category": "meal",
+      "image": "./HealthyRecipesPage/images1/Meals/recipe_meal04.jpg",
+      "alt": "peach slices on brown toast with nuts and cream cheese",
+      "description": "Fruity but also cheesy with crusty brown bread and a hearty sweetness",
+      "keywords": ["cream", "cheese", "fruit", "toast", "breakfast", "peach"],
+      "ingredients": [
+        "2 slices whole grain bread",
+        "3 tbsp cream cheese",
+        "1 ripe peach, thinly sliced",
+        "1 tbsp honey",
+        "2 tbsp chopped walnuts"
+      ],
+      "instructions": [
+        "Toast bread until crispy.",
+        "Spread cream cheese evenly over toast.",
+        "Top with peach slices and drizzle with honey.",
+        "Sprinkle chopped walnuts and serve."
+      ],
+      "prepTime": "10 minutes",
+      "cookTime": "2 minutes",
+      "servings": 2,
+      "nutrition": { "calories": "270", "protein": "6g", "carbs": "33g", "fat": "13g", "fiber": "5g" }
+    },
+    {
+      "id": 5,
+      "title": "Chickpea Tomato Curry",
+      "category": "meal",
+      "image": "./HealthyRecipesPage/images1/Meals/recipe_meal05.jpg",
+      "alt": "chickpea and tomato curry served with rice, cucumber, and dark bread",
+      "description": "A protein-packed, plant-based bowl with chickpeas, fresh herbs, and whole grains for lasting energy",
+      "keywords": ["chickpeas", "tomato", "rice", "curry", "healthy", "cucumber", "lunch"],
+      "ingredients": [
+        "2 cups cooked chickpeas",
+        "1 can diced tomatoes",
+        "1 onion, diced",
+        "2 cloves garlic, minced",
+        "1 tsp cumin",
+        "1 tsp paprika",
+        "1 tbsp olive oil",
+        "Salt and pepper to taste"
+      ],
+      "instructions": [
+        "Heat olive oil in a pan over medium heat. Sauté onion and garlic.",
+        "Stir in cumin and paprika; cook for 1 minute.",
+        "Add chickpeas and tomatoes. Simmer for 15–20 minutes.",
+        "Season with salt and pepper. Serve with rice or bread."
+      ],
+      "prepTime": "10 minutes",
+      "cookTime": "20 minutes",
+      "servings": 4,
+      "nutrition": { "calories": "300", "protein": "13g", "carbs": "40g", "fat": "8g", "fiber": "10g" }
+    },
+    {
+      "id": 6,
+      "title": "Zesty Lemon Pancakes",
+      "category": "meal",
+      "image": "./HealthyRecipesPage/images1/Meals/recipe_meal06.jpg",
+      "alt": "stack of lemon pancakes topped with fresh lemon slices and syrup",
+      "description": "Bright and zesty with whole grains and protein-rich ingredients, these pancakes offer a refreshing, energizing start to your day",
+      "keywords": ["lemon", "pancake", "breakfast", "protein", "whole grain", "citrus"],
+      "ingredients": [
+        "1 cup whole wheat flour",
+        "1 tbsp baking powder",
+        "1 tbsp sugar",
+        "1 cup milk",
+        "1 egg",
+        "2 tbsp lemon juice",
+        "Zest of 1 lemon",
+        "Maple syrup for serving"
+      ],
+      "instructions": [
+        "In a bowl, whisk flour, baking powder, and sugar.",
+        "In another bowl, mix milk, egg, lemon juice, and zest.",
+        "Combine wet and dry ingredients. Stir until smooth.",
+        "Cook pancakes on a greased skillet over medium heat until bubbles form and flip.",
+        "Serve with lemon slices and maple syrup."
+      ],
+      "prepTime": "10 minutes",
+      "cookTime": "15 minutes",
+      "servings": 4,
+      "nutrition": { "calories": "220", "protein": "7g", "carbs": "36g", "fat": "5g", "fiber": "4g" }
+    },
+    {
+      "id": 7,
+      "title": "Veggy Grill",
+      "category": "meal",
+      "image": "./HealthyRecipesPage/images1/Meals/recipe_meal07.jpg",
+      "alt": "assorted vegetables including bell peppers, broccoli, and eggplant grilling over open flames",
+      "description": "A colorful medley of grilled vegetables rich in fiber, antioxidants, and smoky flavor—ideal for a wholesome plant-based meal",
+      "keywords": ["grilled", "vegetables", "vegan", "fiber", "barbecue", "healthy", "plant-based"],
+      "ingredients": [
+        "1 red bell pepper, sliced",
+        "1 yellow bell pepper, sliced",
+        "1 zucchini, sliced",
+        "1 small eggplant, sliced",
+        "1 cup broccoli florets",
+        "2 tbsp olive oil",
+        "Salt and pepper to taste",
+        "1 tsp garlic powder"
+      ],
+      "instructions": [
+        "Preheat grill to medium-high.",
+        "Toss vegetables with olive oil, salt, pepper, and garlic powder.",
+        "Grill vegetables for 6–8 minutes, turning occasionally, until tender and charred.",
+        "Serve hot as a main or side dish."
+      ],
+      "prepTime": "15 minutes",
+      "cookTime": "10 minutes",
+      "servings": 4,
+      "nutrition": { "calories": "150", "protein": "4g", "carbs": "18g", "fat": "7g", "fiber": "6g" }
+    },
+    {
+      "id": 8,
+      "title": "Blackberry Mint Smoothie",
+      "category": "snack",
+      "image": "./HealthyRecipesPage/images1/Snacks/recipe_snack01.jpg",
+      "alt": "two glasses of pink blackberry smoothie topped with frozen blackberries and mint leaves",
+      "description": "A refreshing blend of blackberries and yogurt, rich in antioxidants, fiber, and calcium for a vibrant, immune-boosting snack",
+      "keywords": ["blackberry", "smoothie", "mint", "antioxidants", "fiber", "calcium", "healthy", "refreshing"],
+      "ingredients": [
+        "1 cup blackberries (fresh or frozen)",
+        "1/2 cup plain yogurt",
+        "1/2 cup milk",
+        "1 tbsp honey",
+        "Fresh mint leaves for garnish"
+      ],
+      "instructions": [
+        "Combine blackberries, yogurt, milk, and honey in a blender.",
+        "Blend until smooth.",
+        "Pour into glasses and garnish with mint leaves."
+      ],
+      "prepTime": "5 minutes",
+      "cookTime": "0 minutes",
+      "servings": 2,
+      "nutrition": { "calories": "180", "protein": "6g", "carbs": "34g", "fat": "3g", "fiber": "5g" }
+    },
+    {
+      "id": 9,
+      "title": "Fruit Mosaic Toast",
+      "category": "snack",
+      "image": "./HealthyRecipesPage/images1/Snacks/recipe_snack02.jpg",
+      "alt": "nine pieces of whole grain toast topped with cream cheese and assorted fresh fruits",
+      "description": "A playful and nutrient-rich snack featuring whole grains, fresh fruits, and creamy protein for a balanced burst of energy",
+      "keywords": ["toast", "fruit", "whole grain", "cream cheese", "fiber", "vitamins", "healthy", "snack"],
+      "ingredients": [
+        "4 slices whole grain bread",
+        "1/2 cup cream cheese",
+        "Assorted fruits (berries, kiwi, mango, banana)",
+        "1 tbsp honey (optional)"
+      ],
+      "instructions": [
+        "Toast bread until golden.",
+        "Spread cream cheese on each slice.",
+        "Arrange assorted fruits on top in a mosaic pattern.",
+        "Drizzle honey if desired."
+      ],
+      "prepTime": "10 minutes",
+      "cookTime": "2 minutes",
+      "servings": 4,
+      "nutrition": { "calories": "200", "protein": "5g", "carbs": "30g", "fat": "7g", "fiber": "4g" }
+    },
+    {
+      "id": 10,
+      "title": "Chocolate Fruit Clusters",
+      "category": "snack",
+      "image": "./HealthyRecipesPage/images1/Snacks/recipe_snack03.jpg",
+      "alt": "chocolate-covered snack bites topped with crushed raspberries, coconut flakes, and granola",
+      "description": "Decadent yet nourishing, these antioxidant-rich bites combine dark chocolate, fruit, and seeds for a satisfying, guilt-free treat",
+      "keywords": ["chocolate", "fruit", "raspberry", "coconut", "snack", "antioxidants", "healthy", "energy bites"],
+      "ingredients": [
+        "1 cup dark chocolate chips",
+        "1/4 cup crushed raspberries",
+        "1/4 cup coconut flakes",
+        "1/4 cup granola"
+      ],
+      "instructions": [
+        "Melt dark chocolate chips in a microwave or double boiler.",
+        "Drop spoonfuls of melted chocolate onto parchment paper.",
+        "Top with raspberries, coconut flakes, and granola.",
+        "Chill until firm before serving."
+      ],
+      "prepTime": "10 minutes",
+      "cookTime": "5 minutes",
+      "servings": 12,
+      "nutrition": { "calories": "110", "protein": "2g", "carbs": "14g", "fat": "6g", "fiber": "2g" }
+    },
+    {
+      "id": 11,
+      "title": "Tropical Berry Smoothie Bowl",
+      "category": "snack",
+      "image": "./HealthyRecipesPage/images1/Snacks/recipe_snack04.jpg",
+      "alt": "smoothie bowl topped with strawberries, blueberries, mango, kiwi, pomegranate, coconut, and sesame seeds",
+      "description": "A vibrant blend of berries and tropical fruits loaded with antioxidants, vitamin C, and fiber for a refreshing, nutrient-packed snack",
+      "keywords": ["smoothie bowl", "berries", "tropical", "antioxidants", "vitamin C", "fiber", "healthy", "fruit"],
+      "ingredients": [
+        "1 banana",
+        "1/2 cup strawberries",
+        "1/2 cup mango chunks",
+        "1/2 cup blueberries",
+        "1/2 cup almond milk",
+        "Toppings: kiwi slices, pomegranate seeds, coconut flakes, sesame seeds"
+      ],
+      "instructions": [
+        "Blend banana, strawberries, mango, blueberries, and almond milk until smooth.",
+        "Pour into a bowl.",
+        "Top with kiwi slices, pomegranate seeds, coconut flakes, and sesame seeds."
+      ],
+      "prepTime": "10 minutes",
+      "cookTime": "0 minutes",
+      "servings": 2,
+      "nutrition": { "calories": "250", "protein": "5g", "carbs": "55g", "fat": "5g", "fiber": "9g" }
+    },
+    {
+      "id": 12,
+      "title": "Balanced Charcuterie Board",
+      "category": "snack",
+      "image": "./HealthyRecipesPage/images1/Snacks/recipe_snack05.jpg",
+      "alt": "charcuterie board with blue cheese, cured meats, crackers, dried fruits, nuts, berries, and pretzels",
+      "description": "A savory-sweet mix of protein, fiber, and healthy fats from nuts, fruits, and cheeses—perfect for mindful snacking or entertaining",
+      "keywords": ["charcuterie", "cheese", "nuts", "fruit", "snack", "protein", "fiber", "healthy"],
+      "ingredients": [
+        "Assorted cheeses (blue cheese, cheddar, brie)",
+        "Cured meats (salami, prosciutto)",
+        "Whole grain crackers",
+        "Dried fruits (apricots, cranberries)",
+        "Fresh berries",
+        "Mixed nuts",
+        "Pretzels"
+      ],
+      "instructions": [
+        "Arrange cheeses, cured meats, and crackers on a large board.",
+        "Add dried fruits, fresh berries, nuts, and pretzels.",
+        "Serve immediately or cover and refrigerate briefly before serving."
+      ],
+      "prepTime": "15 minutes",
+      "cookTime": "0 minutes",
+      "servings": 6,
+      "nutrition": { "calories": "320", "protein": "14g", "carbs": "20g", "fat": "22g", "fiber": "3g" }
+    },
+    {
+      "id": 13,
+      "title": "Mango Strawberry Chia Parfait",
+      "category": "snack",
+      "image": "./HealthyRecipesPage/images1/Snacks/recipe_snack06.jpg",
+      "alt": "chia pudding parfait layered with yogurt, strawberries, mango, and topped with oats",
+      "description": "Creamy chia pudding layered with fresh strawberries, ripe mango, and yogurt, topped with oats for a fiber-rich, refreshing snack.",
+      "keywords": ["chia pudding", "mango", "strawberry", "parfait", "yogurt", "oats", "healthy", "fiber"],
+      "ingredients": [
+        "1/4 cup chia seeds",
+        "1 cup almond milk",
+        "1/2 cup plain yogurt",
+        "1/2 cup diced mango",
+        "1/2 cup sliced strawberries",
+        "2 tbsp rolled oats",
+        "1 tbsp honey"
+      ],
+      "instructions": [
+        "Mix chia seeds with almond milk and refrigerate for 2 hours or overnight.",
+        "In a glass, layer chia pudding, yogurt, mango, and strawberries.",
+        "Top with oats and drizzle with honey."
+      ],
+      "prepTime": "10 minutes (plus chilling)",
+      "cookTime": "0 minutes",
+      "servings": 2,
+      "nutrition": { "calories": "210", "protein": "6g", "carbs": "32g", "fat": "7g", "fiber": "9g" }
+    },
+    {
+      "id": 14,
+      "title": "Strawberry Mint Smoothie",
+      "category": "snack",
+      "image": "./HealthyRecipesPage/images1/Snacks/recipe_snack07.jpg",
+      "alt": "tall glass of blended strawberry smoothie garnished with mint leaves and strawberries",
+      "description": "A cooling blend of strawberries and mint for a naturally sweet, vitamin-packed drink perfect for a quick, healthy refreshment.",
+      "keywords": ["smoothie", "strawberry", "mint", "refreshing", "vitamin C", "healthy drink", "fruit"],
+      "ingredients": [
+        "1 cup strawberries (fresh or frozen)",
+        "1/2 cup plain yogurt",
+        "1/2 cup milk",
+        "1 tbsp honey",
+        "Fresh mint leaves for garnish"
+      ],
+      "instructions": [
+        "Blend strawberries, yogurt, milk, and honey until smooth.",
+        "Pour into a glass and garnish with fresh mint leaves."
+      ],
+      "prepTime": "5 minutes",
+      "cookTime": "0 minutes",
+      "servings": 2,
+      "nutrition": { "calories": "170", "protein": "5g", "carbs": "32g", "fat": "3g", "fiber": "4g" }
+    }
+  ]
+}

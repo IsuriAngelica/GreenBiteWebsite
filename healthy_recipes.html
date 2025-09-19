@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="GreenBite" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" href="./Homepage/styling/reset_style.css" type="text/css">
+    <link rel="stylesheet" href="./Homepage/styling/style.css" type="text/css">
+    <link rel="stylesheet" href="./HealthyRecipesPage/styling1/style1.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>GreenBite - Healthy Recipes</title>
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <img src="./Homepage/images/header_logo.png" alt="the logo of GreenBite - a green apple with a bite taken out of it">
+    </div>
+    <!-- hamburger menu -->
+    <button class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./healthy_recipes.html">Healthy Recipes</a></li>
+            <li><a href="./calorie_nutrition_calculator.html">Calorie & Nutrition Calculator</a></li>
+            <li><a href="./workout_generator.html">Workout Generator</a></li>
+            <li><a href="./mindfullness_page.html">Mindfulness Page</a></li>
+            <li><a href="./contact_feedback.html">Contact and Feedback</a></li>
+        </ul>
+        <!-- <a href="#">Home</a>
+        <a href="#">Healthy Recipes</a>
+        <a href="#">Calorie & Nutrition Calculator</a>
+        <a href="#">Workout Generator</a>
+        <a href="#">Mindfulness Page</a>
+        <a href="#">Contact and Feedback</a> -->
+    </nav>
+    </header>
+    <main>
+        <section class="grid-container">
+                <aside class="grid-item-left">
+                    <form id="search-form">
+                        <input type="text" name="q" placeholder="Search for recipes..." id="search-input">
+                        <button type="submit">Search</button>
+                    </form>
+
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Recipes</button>
+                    <button class="filter-btn" data-filter="meal">Meals</button>
+                    <button class="filter-btn" data-filter="snack">Snacks</button>
+                </div>
+
+            <h1>Healthy Recipes Page</h1>
+            <p>Welcome to the healthy recipes page where you can find a collection of delicious recipes where taste meets nutrition.</p>
+            <p>Eating healthy can be hard sometimes, but healthy food equals healthy living! <br>Change it up sometimes and try new recipes from different cultures. <br> Have fun with your food! </p>
+
+            <img src="./HealthyRecipesPage/images1/pexels-freestockpro-2837005.jpg" alt="a wooden bowl of fruites and nuts with on a table with an apple and a stethoscope next to it">
+        </aside>
+        <section class="grid-item-right">
+                <article class="flex-container" id="recipes-container">
+                    <!-- Recipes will be loaded here by JavaScript -->
+                </article>
+                <div class="pagination-container">
+                <!-- Pagination controls -->
+                <div class="pagination">
+                    <button id="prev-btn" class="pagination-btn">← Previous</button>
+                    <span id="page-info">Page 1 of 3</span>
+                    <button id="next-btn" class="pagination-btn">Next →</button>
+                </div>
+                </div>
+            </section>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GreenBite</h3>
+                <p>Your healthy living companion for nutrition, fitness, and mindfulness.</p>
+                <div class="social-icons">
+                    <!-- socials dont exist yet so links dont work actually -->
+                    <a href="#" aria-label="Facebook"><span><img src="./Homepage/images/facebook-icon.png" alt="facebook logo"></span></a>
+                    <a href="#" aria-label="Instagram"><span><img src="./Homepage/images/instagram_icon.png" alt="instagram icon"></span></a>
+                    <a href="#" aria-label="Twitter"><span><img src="./Homepage/images/twitter_icon.png" alt="twitter icon"></span></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./healthy_recipes.html">Healthy Recipes</a></li>
+                    <li><a href="./calorie_nutrition_calculator.html">Calorie Calculator</a></li>
+                    <li><a href="./workout_generator.html">Workout Generator</a></li>
+                    <li><a href="./mindfullness_page.html">Mindfulness</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe for weekly health tips and updates</p>
+                <form id="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="subscription-message"></p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy;2025 GreenBite. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Recipe Modal -->
+        <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-recipe-content">
+            <!-- Recipe details will be loaded here -->
+            </div>
+        </div>
+        </div>
+    <script src="./Homepage/scripting/script.js"></script>
+    <script src="./HealthyRecipesPage/scripting1/script1.js"></script>
+</body>
+</html>
+

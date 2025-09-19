@@ -1,0 +1,983 @@
+/* ===== CORE STYLES ===== */
+
+/* Fix body and html to remove unwanted margins/padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+
+/* Fix main element positioning - add proper top spacing */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* Account for header and footer */
+    margin: 0;
+    margin-top: 20px; /* Add space after header */
+    padding-top: 20px; /* Additional padding to prevent overlap */
+    background-image: url('./backgrounds4/pomodoro-bg.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+}
+
+.mindfulness-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 20px;
+    padding: 2rem;
+    z-index: 10;
+}
+
+.timer-section, .breathing-section {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.491);
+    border-radius: 15px;
+}
+
+.title {
+    font-family: 'Lora', serif;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+#timer-value {
+    color: white;
+    font-size: 3.5rem;
+    font-family: 'Inter', monospace;
+    margin: 1.5rem 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.timer-btn {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.timer-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.timer-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+#timer-message {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    min-height: 2rem;
+}
+
+/* ===== SNOW ANIMATION STYLES ===== */
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fall2 {
+    0% {
+        transform: translateY(-100px) translateX(0px) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(50vh) translateX(100px) rotate(180deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(100vh) translateX(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fall3 {
+    0% {
+        transform: translateY(-100px) translateX(0px) rotate(0deg);
+        opacity: 1;
+    }
+    33% {
+        transform: translateY(33vh) translateX(-50px) rotate(120deg);
+        opacity: 0.8;
+    }
+    66% {
+        transform: translateY(66vh) translateX(50px) rotate(240deg);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(100vh) translateX(0px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Breathing animation */
+.breathing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    transition: all 4s ease-in-out;
+}
+
+.circle.inhale {
+    transform: scale(1.5);
+    background-color: rgba(123, 200, 164, 0.5);
+}
+
+.circle.exhale {
+    transform: scale(1);
+    background-color: rgba(94, 156, 211, 0.5);
+}
+
+#breath-text {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.breathing-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.breathing-btn:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.breathing-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Settings panel */
+.settings-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 380px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.settings-panel.open {
+    right: 0;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    background-color: rgb(28, 129, 93);
+    color: white;
+}
+
+.panel-header h2 {
+    margin: 0;
+    color: white;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+.panel-content {
+    padding: 1.5rem;
+}
+
+.settings-group {
+    margin-bottom: 2rem;
+}
+
+.settings-group h3 {
+    color: rgb(28, 129, 93);
+    margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.settings-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: rgb(14, 62, 45);
+    font-family: 'Inter', sans-serif;
+}
+
+.settings-group input,
+.settings-group select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(178, 201, 193);
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+}
+
+.primary-btn, #clear-sessions {
+    background-color: rgb(28, 144, 103);
+    color: white;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+}
+
+#clear-sessions {
+    width: 60%;
+}
+
+.primary-btn:hover, #clear-sessions:hover {
+    background-color: rgb(44, 221, 159);
+}
+
+#session-stats p {
+    margin: 0.5rem 0;
+    font-family: 'Inter', sans-serif;
+    color: #495057;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.open {
+    display: block;
+}
+
+/* Settings toggle button positioning */
+.settings-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-toggle:hover {
+    opacity: 1;
+}
+
+.settings-toggle img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Make sure header has relative positioning for absolute child positioning */
+header {
+    position: relative;
+}
+
+/* Toggle switch styles */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: rgb(6, 50, 35);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.toggle-label {
+    color: rgb(7, 42, 30);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Sound Controls Container */
+.sound-controls-container {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 5;
+    padding: 15px;
+    border-radius: 12px;
+    min-width: 180px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.sound-controls-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.sound-toggle-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: opacity 0.3s ease;
+}
+
+/* Hidden selector - initially invisible */
+.hidden-selector {
+    bottom: 50px;
+    z-index: 20;
+    opacity: 0;
+    transform: translateY(-10px);
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Magical hover effect */
+.sound-controls-container:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sound-controls-container:hover .hidden-selector {
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+    margin-top: 12px;
+}
+
+.sound-controls-container:hover .sound-toggle-row {
+    opacity: 0.8;
+}
+
+.sound-selector {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-family: "Edu NSW ACT Cursive", cursive;
+    transition: all 0.3s ease;
+}
+
+.sound-selector:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.sound-selector option {
+    background: rgba(40, 40, 40, 0.95);
+    color: white;
+    padding: 8px;
+}
+
+.toggle-label {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#breath-text, .toggle-label {
+    font-family: "Edu NSW ACT Cursive", cursive;
+}
+
+.breathing-section h2 {
+    color: white;
+}
+
+.timer-section h1 {
+    font-family: roboto;
+}
+
+.title-for-page {
+    position: absolute;
+    top: 15px;
+    color: white;
+    font-family: roboto;
+    font-size: 1.7rem;
+    opacity: 0.8;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.title-for-page:hover {
+    opacity: 1;
+}
+
+body {
+    background-color: rgba(0, 2, 9);
+}
+
+/* Fix footer positioning */
+footer {
+    position: relative;
+    z-index: 10;
+    margin-top: auto;
+}
+
+/* Fix for sound controls positioning */
+.sound-controls-container {
+    z-index: 100; 
+    bottom: 30px;
+    left: 30px;
+}
+
+.timer-section {
+    position: relative;
+    z-index: 10; 
+}
+
+.breathing-section {
+    position: relative;
+    z-index: 10; 
+}
+
+.mobile-sound-toggle span {
+    color: white;
+}
+
+
+
+
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1024px) {
+    main {
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+    
+    .mindfulness-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+    
+    #timer-value {
+        font-size: 3rem;
+    }
+    
+    .circle {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 900px) {
+    .mindfulness-container {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+    
+    .settings-panel {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* CRITICAL FIX: Add proper top spacing for mobile */
+    main {
+        margin-top: 80px; /* Increase space after header on mobile */
+        padding-top: 20px;
+        min-height: calc(100vh - 160px); /* Account for larger header */
+    }
+    
+    .mindfulness-container {
+        width: 85%;
+        gap: 1.5rem;
+        padding: 1.2rem;
+        margin-top: 20px; /* Additional margin for timer section */
+    }
+    
+    .timer-section, .breathing-section {
+        padding: 1.2rem;
+    }
+    
+    #timer-value {
+        font-size: 2.8rem;
+        margin: 1rem 0;
+    }
+    
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .timer-controls {
+        gap: 0.8rem;
+        margin: 1.2rem 0;
+    }
+    
+    .timer-btn {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .timer-btn img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .circle {
+        width: 160px;
+        height: 160px;
+        margin: 0.8rem 0;
+    }
+    
+    #breath-text {
+        font-size: 1.3rem;
+    }
+    
+    .breathing-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Settings panel for tablet */
+    .settings-panel {
+        width: 320px;
+    }
+    
+    
+    .hidden-selector {
+        opacity: 1;
+        transform: translateY(0);
+        height: auto;
+        margin-top: 0;
+        margin-left: 10px;
+    }
+    
+    .sound-selector {
+        max-width: 140px;
+        font-size: 0.85rem;
+    }
+    
+    /* Settings toggle for mobile */
+    .settings-toggle {
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .settings-toggle img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* CRITICAL FIX: Even more spacing for small mobile */
+    main {
+        margin-top: 100px; /* Even more space for small screens */
+        padding-top: 25px;
+    }
+    
+    .mindfulness-container {
+        width: 92%;
+        padding: 1rem;
+        margin: 1rem auto;
+        margin-top: 30px; /* Extra spacing */
+    }
+    
+    .timer-section, .breathing-section {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+    
+    #timer-value {
+        font-size: 2.5rem;
+        margin: 0.8rem 0;
+    }
+    
+    .title {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .timer-controls {
+        gap: 0.6rem;
+        margin: 1rem 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .timer-btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .timer-btn img {
+        width: 22px;
+        height: 22px;
+    }
+    
+    #timer-message {
+        font-size: 1rem;
+    }
+    
+    .circle {
+        width: 140px;
+        height: 140px;
+        margin: 0.6rem 0;
+    }
+    
+    #breath-text {
+        font-size: 1.1rem;
+    }
+    
+    .breathing-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        margin: 0.3rem;
+    }
+    
+    /* Settings panel for mobile */
+    .settings-panel {
+        width: 280px;
+    }
+    
+    .panel-content {
+        padding: 1rem;
+    }
+    
+    .settings-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    
+    .sound-toggle-row {
+        justify-content: center;
+    }
+    
+    .sound-selector {
+        max-width: 200px;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    .toggle-label {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .mindfulness-container {
+        width: 95%;
+        padding: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .timer-section, .breathing-section {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    #timer-value {
+        font-size: 2.2rem;
+    }
+    
+    .title {
+        font-size: 1.3rem;
+    }
+    
+    h2 {
+        font-size: 1.1rem;
+    }
+    
+    .timer-btn {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .sound-controls-container {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        padding: 8px;
+    }
+    
+    .sound-selector {
+        max-width: 180px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Special handling for landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    main {
+        margin-top: 60px;
+        padding-top: 15px;
+    }
+    
+    .mindfulness-container {
+        grid-template-columns: 1fr 1fr;
+        width: 90%;
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+    
+    #timer-value {
+        font-size: 2rem;
+    }
+    
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .sound-controls-container {
+        bottom: 10px;
+        left: 10px;
+        padding: 8px;
+    }
+}
+
+/* For very short screens */
+@media (max-height: 600px) {
+    .mindfulness-container {
+        transform: scale(0.9);
+        transform-origin: center top;
+    }
+    
+}
+
+/* Mobile-optimized sound controls */
+@media (max-width: 768px) {
+    /* Hide the full sound controls on mobile */
+    .sound-controls-container {
+        display: none;
+    }
+    
+    /* Mobile sound toggle button */
+    .mobile-sound-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 100;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-sound-toggle:hover {
+        background: rgba(0, 0, 0, 0.7);
+        transform: scale(1.1);
+    }
+    
+    .mobile-sound-toggle span {
+        font-size: 24px;
+    }
+    
+    /* Mobile sound panel */
+    .mobile-sound-panel {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(15px);
+        border-radius: 15px;
+        padding: 15px;
+        width: 200px;
+        z-index: 99;
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+        visibility: hidden;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-sound-panel.open {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        visibility: visible;
+    }
+    
+    .mobile-sound-panel .sound-toggle-row {
+        margin-bottom: 15px;
+        justify-content: space-between;
+    }
+    
+    .mobile-sound-panel .sound-selector {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    /* Remove extra padding from breathing section */
+    .breathing-section {
+        padding-bottom: 1.2rem !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+/* Hide mobile controls on desktop */
+@media (min-width: 769px) {
+    .mobile-sound-toggle,
+    .mobile-sound-panel {
+        display: none !important;
+    }
+}
+
+/* Fix for hamburger menu positioning */
+header {
+    position: sticky !important; /* Override the problematic rule */
+    top: 0;
+}
+
+/* Ensure hamburger button is positioned correctly */
+.hamburger {
+    position: absolute !important;
+    right: 20px !important;
+    top: 35px !important;
+    z-index: 1001;
+}

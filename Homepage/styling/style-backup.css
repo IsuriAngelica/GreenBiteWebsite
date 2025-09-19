@@ -1,0 +1,226 @@
+header {
+    background-color:rgb(232, 255, 247);
+    color:rgb(14, 62, 45);
+    padding: 20px;
+    text-align: center;
+}
+img {
+    height: 150px;
+    width: auto;
+    vertical-align: middle;
+}
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(28, 129, 93);
+  display: flex;
+  justify-content: center; 
+}
+
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+nav li a:hover {
+  background-color:rgb(8, 43, 31);
+  transform: scale(1.05);
+}
+
+#homepageCollage {
+    width: 100%;
+    height: auto;
+}
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    display: block;
+    width: 100%; 
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: 1fr;   
+    width: 100%;
+    height: 100%;
+}
+
+.grid-overlay div {
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+}
+
+.hero-content {
+    padding : 20px;
+    margin: 20px;
+    background-color: rgba(14, 62, 45);
+    border-radius: 20px;
+    color: white;
+}
+
+footer {
+    background-color: rgb(58, 109, 92);
+    color:rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item {
+    flex: 1;
+    padding: 10px;
+    background-color: rgb(232, 255, 247);
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow:0 4px 16px rgba(0, 0, 0, 0.8);
+    font-size: 1.5rem;
+    color: rgb(14, 62, 45);
+}
+
+.flex-item#quote {
+    border-radius: 0;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.3);
+}
+/* .dark-glass {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+} */
+
+.flex-item#quote {
+    display: flex;
+    flex: 0.5;
+    font-style: italic;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;
+}
+
+/* .flex-item#daily-tips {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    gap: 20px;
+    justify-content: left;
+}
+
+.flex-item#daily-tips li {
+    flex: 1 1 0;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(232, 255, 247);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.flex-item#daily-tips {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 20px;
+    padding: 40px;
+}
+
+.flex-item#daily-tips li {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(232, 255, 247);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    transition: transform 0.3s ease;
+}
+
+.flex-item#daily-tips li:hover {
+    transform: scale(1.05); 
+}
+
+.flex-item#quote {
+    transition: transform 0.3s ease; 
+}
+
+.flex-item#quote:hover {
+    transform: scale(1.05); 
+}
+
+.flex-item#daily-tips h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+main {
+    font-size: large;
+}
+
+body {
+    background-color: rgb(232, 255, 247);
+    cursor: url('./backgrounds/pointer2.png'), auto;
+}
+
+h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+}
+
+body {
+    display:grid;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+#quote-text {
+    transition: opacity 1s ease-in-out;
+}
+.fade-out {
+    opacity: 0;
+}
