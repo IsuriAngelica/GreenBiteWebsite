@@ -182,7 +182,7 @@ body {
     padding: 20px;
 }
 
-.home-content-section h1 {
+.home-content-section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-align: center;
@@ -481,7 +481,7 @@ nav li a {
         padding: 0;
     }
     
-    .welcome-text h1 {
+    .welcome-text h2 {
         font-size: 2.2rem;
         margin-bottom: 10px;
         color: rgb(14, 62, 45);
