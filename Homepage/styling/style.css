@@ -154,7 +154,6 @@ body {
 }
 
 .top-bar {
-    background-color: rgb(232, 255, 247);
     margin-bottom: 20px;
     align-items: center;
 }
@@ -520,7 +519,6 @@ nav li a {
         padding: 20px;
         border-radius: 18px;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        border-left: 4px solid rgb(28, 144, 103);
     }
     
     #quote-text {
