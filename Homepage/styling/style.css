@@ -214,7 +214,7 @@ body {
     transform: scale(1.05); 
 }
 
-.article-preview h3 {
+.article-preview h2 {
     font-size: 1.3rem;
     margin-bottom: 10px;
     text-align: center;
