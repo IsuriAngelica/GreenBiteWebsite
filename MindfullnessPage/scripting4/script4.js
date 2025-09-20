@@ -182,25 +182,31 @@ let currentSoundType = 'rain';
 soundToggle.checked = false;
 
 // Initialize with rain sound ready
-const rainSound = document.getElementById('rain-sound');
-const forestSound = document.getElementById('forest-sound');
+// Create audio elements dynamically instead of using HTML
+let rainSound, forestSound;
 
-// Set volume control for better user experience
-rainSound.volume = 0.6; // 60% volume
-forestSound.volume = 0.6; // 60% volume
+function createAudioElements() {
+    rainSound = new Audio('./MindfullnessPage/sounds/meditative-rain.mp3');
+    forestSound = new Audio('./MindfullnessPage/sounds/ambient-background.mp3');
+    rainSound.volume = 0.6;
+    forestSound.volume = 0.6;
+    rainSound.loop = true;
+    forestSound.loop = true;
+}
 
-soundToggle.addEventListener('change', () => {
-    if (soundToggle.checked) {
-        stopAllSounds();
-        currentSound = document.getElementById(`${currentSoundType}-sound`);
-        currentSound.play().catch(error => {
-            console.log('Audio play failed:', error);
-            soundToggle.checked = false;
-        });
-    } else {
-        stopAllSounds();
+// Call this when needed, not on page load
+function playSound(soundType) {
+    if (!rainSound || !forestSound) {
+        createAudioElements();
     }
-});
+    
+    stopAllSounds();
+    currentSound = soundType === 'rain' ? rainSound : forestSound;
+    currentSound.play().catch(error => {
+        console.log('Audio play failed:', error);
+        soundToggle.checked = false;
+    });
+}
 
 function stopAllSounds() {
     if (currentSound) {
@@ -373,7 +379,20 @@ soundSelector.addEventListener('change', () => {
         // Simulate the other elements that would be in your full app
         console.log("All JavaScript errors have been fixed!");
 
+soundToggle.addEventListener('change', () => {
+    if (soundToggle.checked) {
+        playSound(currentSoundType); // Use our new function
+    } else {
+        stopAllSounds();
+    }
+});
 
+soundSelector.addEventListener('change', () => {
+    currentSoundType = soundSelector.value;
+    if (soundToggle.checked) {
+        playSound(currentSoundType); // Use our new function
+    }
+});
 
 
 // Mobile sound controls functionality
