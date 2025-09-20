@@ -173,10 +173,6 @@ body {
     align-self:flex-start;
 }
 
-.container-daily-tips {
-    background-image: url("./backgrounds/homepage_collage.png");
-    padding: 20px;
-}
 
 #daily-tips h2 {
     font-family: "Edu NSW ACT Cursive", cursive;
