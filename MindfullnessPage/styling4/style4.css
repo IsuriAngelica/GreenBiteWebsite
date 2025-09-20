@@ -9,15 +9,15 @@ html, body {
 
 
 
-/* Fix main element positioning - add proper top spacing */
+
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 120px); /* Account for header and footer */
+    min-height: calc(100vh - 120px); 
     margin: 0;
-    margin-top: 20px; /* Add space after header */
-    padding-top: 20px; /* Additional padding to prevent overlap */
+    margin-top: 20px; 
+    padding-top: 20px; 
     background-image: image-set(
     url('./backgrounds4/pomodoro-bg.webp') type('image/webp'),
     url('./backgrounds4/pomodoro-bg.png') type('image/png')
@@ -346,23 +346,23 @@ main {
     background: none;
     border: none;
     cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
     z-index: 10;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease-in-out;
 }
 
 .settings-toggle:hover {
-    opacity: 1;
+    transform: rotate(90deg) scale(1.1);
 }
 
 .settings-toggle img {
-    width: 30px;
-    height: 30px;
+    width: 45px !important;
+    height: 45px !important;
+    object-fit: contain !important;
 }
 
 /* Make sure header has relative positioning for absolute child positioning */
@@ -985,4 +985,48 @@ header {
     right: 20px !important;
     top: 35px !important;
     z-index: 1001;
+}
+
+/* EMERGENCY FIX FOR HAMBURGER MENU CLOSE BUTTON */
+/* Target the hamburger button when menu is open */
+.hamburger[aria-expanded="true"] {
+    z-index: 10001 !important;
+    position: fixed !important;
+    right: 25px !important;
+    top: 25px !important;
+}
+
+/* Target the close icon specifically */
+.hamburger[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px) !important;
+    z-index: 10002 !important;
+}
+
+.hamburger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0 !important;
+}
+
+.hamburger[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px) !important;
+    z-index: 10002 !important;
+}
+
+/* Make sure the navigation menu has lower z-index */
+nav[aria-hidden="false"],
+nav.active {
+    z-index: 10000 !important; /* Lower than close button */
+}
+
+/* Make sure hamburger button stays on top when menu is open */
+.hamburger {
+    z-index: 10002 !important;
+    position: fixed !important;
+    right: 20px !important;
+    top: 20px !important;
+}
+
+/* Make sure the menu itself has lower z-index */
+.mobile-menu, 
+nav[aria-expanded="true"] {
+    z-index: 10001 !important;
 }

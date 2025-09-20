@@ -428,3 +428,16 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// Emergency fix for hamburger menu close button
+document.addEventListener('DOMContentLoaded', function() {
+    // Wait a bit then bring close button to front
+    setTimeout(() => {
+        const hamburger = document.querySelector('.hamburger');
+        if (hamburger) {
+            hamburger.style.zIndex = '10001';
+            hamburger.style.position = 'fixed';
+            hamburger.style.right = '25px';
+            hamburger.style.top = '25px';
+        }
+    }, 1000);
+});

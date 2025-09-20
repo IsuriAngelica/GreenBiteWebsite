@@ -58,7 +58,7 @@
         <button class="settings-toggle" id="settings-toggle">
             <picture>
                 <source srcset="./MindfullnessPage/images4/settings-button.webp" type="image/webp">
-                <img src="./MindfullnessPage/images4/settings-button.png" alt="settings button">
+                <img src="./MindfullnessPage/images4/settings-button.png" alt="settings button" width="45" height="45">
             </picture>
         </button>
         <div class="mindfulness-container">
@@ -68,9 +68,24 @@
                 <h1 class="title">Meditation Timer</h1>
                 <div id="timer-value">25:00</div>
                 <div class="timer-controls">
-                    <button id="start" class="timer-btn"><img src="./MindfullnessPage/images4/play-button.png" alt="play button"></button>
-                    <button id="pause" class="timer-btn"><img src="./MindfullnessPage/images4/pause-button.png" alt="pause button"></button>
-                    <button id="reset" class="timer-btn"><img src="./MindfullnessPage/images4/reset-button.png" alt="reset button"></button>
+                    <button id="start" class="timer-btn">
+                        <picture>
+                        <source srcset="./MindfullnessPage/images4/play-button.webp" type="image/webp">
+                        <img src="./MindfullnessPage/images4/play-button.png" alt="play button">
+                        </picture>
+                    </button>
+                    <button id="pause" class="timer-btn">
+                        <picture>
+                        <source srcset="./MindfullnessPage/images4/pause-button.webp" type="image/webp">
+                        <img src="./MindfullnessPage/images4/pause-button.png" alt="pause button">
+                        </picture>
+                    </button>
+                    <button id="reset" class="timer-btn">
+                        <picture>
+                        <source srcset="./MindfullnessPage/images4/reset-button.webp" type="image/webp">
+                        <img src="./MindfullnessPage/images4/reset-button.png" alt="reset button">
+                        </picture>
+                    </button>
                     
                 </div>
                 <div id="timer-message"></div>
@@ -95,7 +110,7 @@
                 <!-- Always visible toggle -->
                 <div class="sound-toggle-row">
                     <label class="toggle-switch">
-                        <input type="checkbox" id="sound-toggle">
+                        <input type="checkbox" id="sound-toggle" aria-label="Toggle ambient sound on and off">
                         <span class="slider"></span>
                     </label>
                     
@@ -103,8 +118,8 @@
                 
                 <!-- Hidden selector that appears on hover -->
                 <div class="sound-selector-row hidden-selector">
-                    <span class="toggle-label">Ambient Sound</span>
-                    <select id="sound-selector" class="sound-selector">
+                    <span class="toggle-label" id="sound-label">Ambient Sound</span>
+                    <select id="sound-selector" class="sound-selector" aria-labelledby="sound-label">
                         <option value="rain">🌧️ Gentle Rain</option>
                         <option value="forest">🎵 Ambient Music</option>
                     </select>
@@ -126,9 +141,6 @@
                     <h3>Timer Settings</h3>
                     <label for="custom-minutes">Meditation Time (minutes):</label>
                     <input type="number" id="custom-minutes" min="1" max="120" value="25">
-                    
-                     
-                    
                 </div>
                 
                 <!-- Breathing Settings -->
@@ -217,13 +229,13 @@
         </div>
     </footer>
     
-    <!-- Audio elements for ambient sounds -->
-    <audio id="rain-sound" loop>
-        <source src="./MindfullnessPage/sounds/meditative-rain.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="forest-sound" loop>
-        <source src="./MindfullnessPage/sounds/ambient-background.mp3" type="audio/mpeg">
-    </audio>
+            <!-- Audio elements for ambient sounds -->
+            <audio id="rain-sound" loop>
+                <source src="./MindfullnessPage/sounds/meditative-rain.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="forest-sound" loop>
+                <source src="./MindfullnessPage/sounds/ambient-background.mp3" type="audio/mpeg">
+            </audio>
 
                     <!-- Mobile sound controls -->
                 <div class="mobile-sound-toggle" id="mobile-sound-toggle">
@@ -234,11 +246,11 @@
                     <div class="sound-toggle-row">
                         <span class="toggle-label">Sound</span>
                         <label class="toggle-switch">
-                            <input type="checkbox" id="mobile-sound-toggle-checkbox">
+                            <input type="checkbox" id="mobile-sound-toggle-checkbox" aria-label="Toggle ambient sound on and off">
                             <span class="slider"></span>
                         </label>
-                    </div>
-                    <select id="mobile-sound-selector" class="sound-selector">
+                                            </div>
+                    <select id="mobile-sound-selector" class="sound-selector" aria-label="Choose ambient sound type">
                         <option value="rain">🌧️ Gentle Rain</option>
                         <option value="forest">🎵 Ambient Music</option>
                     </select>
