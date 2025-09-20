@@ -636,10 +636,7 @@ nav li a {
         z-index: 2;
     }
     
-    /* Optional: Add shape-outside for text wrapping */
     .Hero-Image {
-        shape-outside: circle(40%);
-        shape-margin: 1rem;
         float: right;
         margin-left: 30px;
         margin-bottom: 20px;
