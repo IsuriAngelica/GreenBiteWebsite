@@ -79,7 +79,7 @@ function generateWorkout() {
     
     // Build the workout HTML
     let workoutHTML = `
-      <h3>Your custom workout plan</h3>
+      <h2>Your custom workout plan</h2>
       <h4>Your ${bodyPart} Workout</h4>
       <div class="workout-content">
     `;

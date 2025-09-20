@@ -28,6 +28,10 @@
             margin-top: 20px;
         }
 
+        .workout-plan h2 {
+            font-size: 1.5rem;
+        }
+
         .workout-content {
             display: flex;
             flex-direction: column;
@@ -125,7 +129,7 @@
         }
 
         #stand-in-msg {
-            opacity: 50%;
+            opacity: 80%;
             text-align: center;
         }
 
@@ -163,7 +167,7 @@
 
         /* ===== BUTTONS & CONTROLS ===== */
         #workout-button, form input[type="submit"], #apply-timer {
-            background-color: rgb(28, 144, 103);
+            background-color: rgb(3, 73, 47);
             color: white;
             border: none;
             padding: 6px 14px;
@@ -715,7 +719,7 @@ main {
 }
 
 .start-exercise-timer {
-    background-color: rgb(28, 144, 103);
+    background-color: rgb(3, 73, 47);
     color: white;
     border: none;
     padding: 8px 16px;
