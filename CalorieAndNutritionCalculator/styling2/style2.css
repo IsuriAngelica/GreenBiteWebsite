@@ -70,6 +70,11 @@ form {
 }
 
 .description-calc {
+  background-image: image-set(
+    url('./backgrounds2/apple-measuring-tape.webp') type('image/webp'),
+    url('./backgrounds2/apple-measuring-tape.png') type('image/png')
+  );
+  
     background-image: url('./backgrounds2/apple-measuring-tape.png');
     background-size: cover;
     color: white;
@@ -87,6 +92,11 @@ input, select{
 }
 
 body {
+    background-image: image-set(
+    url('./backgrounds2/calc-background-collage.webp') type('image/webp'),
+    url('./backgrounds2/calc-background-collage.png') type('image/png')
+  );
+  
     background-image: url('./backgrounds2/calc-background-collage.png');
 }
 
@@ -323,6 +333,8 @@ fieldset {
 }
 
 .plate-collage {
+    height: 350px;
+    width:350px;
     border-radius: 50%;
     opacity: 0.9;
     margin: 30px;
@@ -477,6 +489,12 @@ fieldset {
     }
     .macro-row {
         gap: 10px;
+    }
+
+    .plate-collage {
+        height: 200px;
+        width:200px;
+        margin: 10px;
     }
 }
 
