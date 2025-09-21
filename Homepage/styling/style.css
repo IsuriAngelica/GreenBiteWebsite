@@ -842,12 +842,12 @@ nav li a {
 
 /* Daily Tips Container */
 .container-daily-tips {
-  /* background-image: image-set(
+  background-image: image-set(
     url('./backgrounds/homepage_collage.webp') type('image/webp'),
     url('./backgrounds/homepage_collage.png') type('image/png')
   );
   
-    background-image: url('./backgrounds/homepage_collage.png'); */
+    background-image: url('./backgrounds/homepage_collage.png');
     padding: 20px;
     display: flex;
     justify-content: center; 

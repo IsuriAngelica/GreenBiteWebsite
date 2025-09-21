@@ -251,14 +251,14 @@
             margin-bottom: 10px;
         }
 
-/* main {
+main {
     background-image: image-set(
     url('./backgrounds5/contact-collage.webp') type('image/webp'),
     url('./backgrounds5/contact-collage.png') type('image/png')
   );
   
     background-image: url('./backgrounds5/contact-collage.png');
-} */
+}
 
 .map-container {
             height: 400px;
