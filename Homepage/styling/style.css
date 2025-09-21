@@ -856,7 +856,7 @@ nav li a {
 .container-daily-tips {
   background-image: image-set(
     url('./backgrounds/homepage_collage.webp') type('image/webp'),
-    url('./backgrounds/homepage_collage.jpg') type('image/png')
+    url('./backgrounds/homepage_collage.jpg') type('image/jpg')
   );
   
     background-image: url('./backgrounds/homepage_collage.jpg');

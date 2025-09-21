@@ -11,8 +11,8 @@ main {
     margin: 0;
     margin-top: 20px;
     padding-top: 20px;
-    background-image: image-set( url('./backgrounds4/pomodoro-bg.webp') type('image/webp'), url('./backgrounds4/pomodoro-bg.png') type('image/png') );
-    background-image: url('./backgrounds4/pomodoro-bg.png');
+    background-image: image-set( url('./backgrounds4/pomodoro-bg.webp') type('image/webp'), url('./backgrounds4/pomodoro-bg.jpg') type('image/jpg') );
+    background-image: url('./backgrounds4/pomodoro-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
