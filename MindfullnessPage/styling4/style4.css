@@ -432,7 +432,7 @@ input:checked + .slider:before {
 .breathing-section h2 {
     color: white;
 }
-.timer-section h1 {
+.timer-section h2 {
     font-family: roboto;
 }
 .title-for-page {
