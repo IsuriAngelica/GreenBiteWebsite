@@ -828,3 +828,48 @@ nav[aria-hidden="false"], nav.active {
 .mobile-menu, nav[aria-expanded="true"] {
     z-index: 10001 !important;
 }
+
+/* Mobile-specific settings button size increase */
+@media (max-width: 768px) {
+    .settings-toggle {
+        width: 55px !important;  /* Increased from 35px */
+        height: 55px !important; /* Increased from 35px */
+        top: 15px !important;
+        right: 15px !important;
+    }
+    
+    .settings-toggle img {
+        width: 35px !important;  /* Increased from 25px */
+        height: 35px !important; /* Increased from 25px */
+    }
+
+}
+
+/* For very small screens (under 360px) */
+@media (max-width: 360px) {
+    .settings-toggle {
+        width: 50px !important;
+        height: 50px !important;
+        top: 10px !important;
+        right: 10px !important;
+    }
+    
+    .settings-toggle img {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
+/* Ensure the button is always visible and clickable */
+.settings-toggle {
+    z-index: 1000 !important;
+    border-radius: 50% !important;
+    padding: 5px !important;
+    backdrop-filter: blur(5px) !important;
+}
+
+/* Add hover effect for better visibility */
+.settings-toggle:hover {
+    transform: scale(1.1) rotate(90deg) !important;
+}
+

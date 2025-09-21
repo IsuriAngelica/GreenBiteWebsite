@@ -266,3 +266,172 @@ main {
             border-radius: 8px;
             overflow: hidden;
         }
+
+/* Responsive improvements */
+        :root {
+            --base-font-size: 16px;
+            --scale-factor: 1.2;
+            --h2-size: calc(1.5rem + 0.5vw);
+            --h3-size: calc(1.25rem + 0.25vw);
+            --p-size: calc(1rem + 0.1vw);
+            --small-size: calc(0.875rem + 0.1vw);
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --base-font-size: 14px;
+            }
+        }
+
+        body {
+            font-size: var(--base-font-size);
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: var(--h2-size);
+        }
+
+        h3 {
+            font-size: var(--h3-size);
+        }
+
+        p, .form-control, .btn {
+            font-size: var(--p-size);
+        }
+
+        .error, .faq-answer p {
+            font-size: var(--small-size);
+        }
+
+        /* Make map responsive */
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%; /* 4:3 aspect ratio */
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Responsive grid adjustments */
+        .main-container-contact {
+            gap: 20px;
+            padding: 15px;
+        }
+
+        @media (max-width: 992px) {
+            .main-container-contact {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container-contact {
+                padding: 10px;
+                gap: 10px;
+            }
+            
+            .page-title, .contact-form, .map-embed, .FAQs {
+                padding: 20px 15px;
+            }
+            
+            .page-title h2 {
+                font-size: calc(1.8rem + 0.5vw);
+                margin-bottom: 8px;
+            }
+            
+            .page-title p {
+                font-size: calc(1rem + 0.1vw);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-title, .contact-form, .map-embed, .FAQs {
+                padding: 15px 10px;
+                border-radius: 6px;
+            }
+            
+            .form-group {
+                margin-bottom: 15px;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                width: 100%;
+            }
+            
+            .faq-question {
+                padding: 12px;
+            }
+        }
+
+        /* Touch-friendly elements for mobile */
+        @media (hover: none) and (pointer: coarse) {
+            .btn, .faq-question {
+                min-height: 44px; /* Minimum touch target size */
+            }
+            
+            .form-control {
+                padding: 14px 15px; /* Larger touch area */
+            }
+        }
+
+        /* Prevent horizontal scrolling */
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+/* Add to the top of your CSS */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Replace your .map styles with this */
+.map {
+    height: 400px;
+    background-color: rgb(229, 248, 241);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Add responsive font sizes */
+@media (max-width: 768px) {
+    .page-title h2 {
+        font-size: 2rem;
+    }
+    
+    .page-title p {
+        font-size: 1rem;
+    }
+}
+
+/* Ensure grid items don't overflow */
+.main-container-contact {
+    max-width: 100%;
+}
