@@ -166,6 +166,7 @@ nextBtn.addEventListener('click', () => {
 // Modal with recipe details
 function openRecipeModal(recipe) {
   modalContent.innerHTML = `
+  <button class="close-modal-btn" aria-label="Close modal">&times;</button>
     <h2>${recipe.title}</h2>
     <img src="${recipe.image}" alt="${recipe.alt}">
     <p>${recipe.description}</p>
@@ -196,7 +197,12 @@ function openRecipeModal(recipe) {
       </table>
     </div>
   `;
-  
+
+   // Add click listener for the new button
+  modalContent.querySelector('.close-modal-btn').addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
   modal.style.display = 'block';
 }
 

@@ -1,4 +1,3 @@
-
 .header-content img {
     height: 100px;
 }
@@ -349,113 +348,7 @@ body {
     font-weight: bold;
 }
 
-/* Modal Styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-content {
-  background-color: rgb(232, 255, 247);
-  margin: 5% auto;
-  padding: 30px;
-  border-radius: 15px;
-  width: 80%;
-  max-width: 700px;
-  max-height: 80vh;
-  overflow-y: auto;
-  position: relative;
-}
-
-.close-modal {
-  color: rgb(14, 62, 45);
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  position: absolute;
-  right: 20px;
-  top: 15px;
-}
-
-.close-modal:hover {
-  color: rgb(28, 144, 103);
-}
-
-/* Modal Recipe Content */
-#modal-recipe-content h2 {
-  color: rgb(14, 62, 45);
-  margin-bottom: 15px;
-}
-
-#modal-recipe-content img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.ingredients-list, .instructions-list {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 15px 0;
-}
-
-.ingredients-list h3, .instructions-list h3 {
-  color: rgb(28, 144, 103);
-  margin-bottom: 10px;
-}
-
-.ingredients-list ul, .instructions-list ol {
-  padding-left: 20px;
-}
-
-.ingredients-list li, .instructions-list li {
-  margin-bottom: 8px;
-  line-height: 1.5;
-}
-
-.nutrition-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.nutrition-table th, .nutrition-table td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid rgb(232, 255, 247);
-}
-
-.nutrition-table th {
-  background-color: rgb(28, 144, 103);
-  color: white;
-}
-
-.nutrition-table tr:last-child td {
-  border-bottom: none;
-}
-
-#recipes-container h2 {
-  font-size: 1.4rem;
-}
-
-#recipes-container p {
-  font-size: 1.2rem;
-}
-
-
+/* REMOVED DUPLICATE MODAL STYLES - KEEP ONLY THE ENHANCED VERSION BELOW */
 
 main {
     background-image: image-set(
@@ -471,7 +364,6 @@ main {
     display: inline-block; 
     padding: 20px;
     border-radius: 50px;
-
 }
 
 .pagination-container {
@@ -479,3 +371,309 @@ main {
   justify-content: center;
 }
 
+/* Enhanced Responsive Modal Styles - REPLACES THE OLD MODAL STYLES */
+/* .modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; 
+} */
+
+/* .modal-content {
+    background-color: rgb(232, 255, 247);
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    animation: modalopen 0.4s;
+} */
+
+@keyframes modalopen {
+    from {opacity: 0; transform: translateY(-60px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-modal {
+    color: rgb(14, 62, 45);
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+    z-index: 2001;
+}
+
+.close-modal:hover {
+    color: rgb(28, 144, 103);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Recipe Content */
+#modal-recipe-content h2 {
+    color: rgb(14, 62, 45);
+    margin-bottom: 15px;
+    padding-right: 40px; /* Space for close button */
+    font-size: 28px;
+}
+
+#modal-recipe-content img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.ingredients-list, .instructions-list {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.ingredients-list h3, .instructions-list h3 {
+    color: rgb(28, 144, 103);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.ingredients-list ul, .instructions-list ol {
+    padding-left: 20px;
+}
+
+.ingredients-list li, .instructions-list li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.nutrition-table th, .nutrition-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgb(232, 255, 247);
+}
+
+.nutrition-table th {
+    background-color: rgb(28, 144, 103);
+    color: white;
+}
+
+.nutrition-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive Design for Modal */
+@media (max-width: 768px) {
+    /* .modal-content {
+        width: 90%;
+        margin: 10% auto;
+        padding: 25px;
+        max-height: 80vh;
+    } */
+    
+    .close-modal {
+        right: 15px;
+        top: 12px;
+        font-size: 28px;
+    }
+    
+    #modal-recipe-content h2 {
+        font-size: 24px;
+    }
+    
+    #modal-recipe-content img {
+        max-height: 200px;
+    }
+    
+    .ingredients-list, .instructions-list {
+        padding: 15px;
+    }
+    
+    .nutrition-table {
+        font-size: 14px;
+    }
+    
+    .nutrition-table th, .nutrition-table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* .modal-content {
+        width: 70%;
+        margin: 5% auto;
+        padding: 20px;
+        border-radius: 10px;
+        max-height: 90vh;
+    } */
+    
+    .close-modal {
+        right: 12px;
+        top: 10px;
+        font-size: 24px;
+    }
+    
+    #modal-recipe-content h2 {
+        font-size: 22px;
+        margin-right: 30px;
+    }
+    
+    #modal-recipe-content img {
+        max-height: 180px;
+        max-width: 100;
+    }
+    
+    .ingredients-list h3, .instructions-list h3 {
+        font-size: 18px;
+    }
+    
+    .ingredients-list, .instructions-list {
+        padding: 12px;
+    }
+    
+    .nutrition-table {
+        font-size: 13px;
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .nutrition-table th, .nutrition-table td {
+        padding: 8px 10px;
+    }
+    
+    /* Stack nutrition table on very small screens */
+    @media (max-width: 340px) {
+        .nutrition-table {
+            font-size: 12px;
+        }
+        
+        .nutrition-table th, .nutrition-table td {
+            padding: 6px 8px;
+        }
+    }
+}
+
+/* Samsung Galaxy Fold and very small devices */
+@media (max-width: 320px) {
+    /* .modal-content {
+        padding: 15px;
+    }
+     */
+    #modal-recipe-content h2 {
+        font-size: 20px;
+    }
+    
+    .ingredients-list, .instructions-list {
+        padding: 10px;
+    }
+}
+
+/* Improve touch targets for mobile */
+@media (hover: none) and (pointer: coarse) {
+    .close-modal {
+        padding: 10px;
+        margin: -10px -10px 0 0;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+    /* .modal-content {
+        max-height: 80vh;
+    } */
+}
+
+
+@media (max-width: 480px) {
+  /* .modal-content {
+    width: 95%;          
+    margin: 10px auto;   
+    padding: 15px;       
+    max-height: 90vh;    
+    overflow-y: auto;   
+    box-sizing: border-box; 
+  } */
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure modal covers screen but doesn't overflow */
+#recipe-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  overflow: auto; 
+  display: none; 
+  z-index: 1000;
+}
+
+#modal-recipe-content {
+  position: relative;
+  background: #fff;
+  margin: 5vh auto;
+  padding: 20px;
+  width: min(95%, 600px);
+  max-height: 90vh;       
+  overflow-y: auto;       
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+/* Shrink wide elements inside modal */
+#modal-recipe-content img,
+#modal-recipe-content table {
+  max-width: 100%;
+  height: auto;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 1100;
+}
+
+.close-modal-btn:hover {
+  color: #e74c3c;
+}
