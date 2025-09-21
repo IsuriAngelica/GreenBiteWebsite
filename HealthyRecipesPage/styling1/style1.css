@@ -457,14 +457,14 @@ body {
 
 
 
-main {
+/* main {
     background-image: image-set(
     url('./backgrounds1/recipe-collage.webp') type('image/webp'),
     url('./backgrounds1/recipe-collage.png') type('image/png')
   );
   
     background-image: url('./backgrounds1/recipe-collage.png');
-}
+} */
 
 .pagination {
     background-color: rgb(232, 255, 247);

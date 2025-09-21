@@ -75,12 +75,12 @@ form {
 }
 
 .description-calc{
-  background-image: image-set(
+  /* background-image: image-set(
   url('./backgrounds2/apple-measuring-tape.webp') type('image/webp'),
   url('./backgrounds2/apple-measuring-tape.png') type('image/png')
 );
     background-image: url('./backgrounds2/apple-measuring-tape.png');
-    background-size: cover;
+    background-size: cover; */
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -100,14 +100,14 @@ input, select{
     box-sizing: border-box;
 }
 
-body {
+/* body {
     background-image: image-set(
     url('./backgrounds2/calc-background-collage.webp') type('image/webp'),
     url('./backgrounds2/calc-background-collage.png') type('image/png')
   );
   
     background-image: url('./backgrounds2/calc-background-collage.png');
-}
+} */
 
 .flex-items-calc {
     display: flex;

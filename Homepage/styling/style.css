@@ -841,7 +841,7 @@ nav li a {
 }
 
 /* Daily Tips Container */
-/* .container-daily-tips {
+.container-daily-tips {
   background-image: image-set(
     url('./backgrounds/homepage_collage.webp') type('image/webp'),
     url('./backgrounds/homepage_collage.png') type('image/png')
@@ -851,7 +851,7 @@ nav li a {
     padding: 20px;
     display: flex;
     justify-content: center; 
-} */
+}
 
 /* Daily Tips Box - Reduced Width */
 .flex-item#daily-tips {
