@@ -46,7 +46,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
         
-        .page-title h1 {
+        .page-title h2 {
             font-size: 2.8rem;
             color: white;
             margin-bottom: 10px;
@@ -262,7 +262,7 @@ main {
 
 .map-container {
             height: 400px;
-            width: 100%;
+            width: 500px;
             border-radius: 8px;
             overflow: hidden;
         }
