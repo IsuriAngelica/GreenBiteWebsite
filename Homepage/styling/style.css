@@ -1,5 +1,3 @@
-
-
 html {
     font-family: roboto;
     color: rgb(8, 43, 31);
@@ -27,10 +25,6 @@ header {
     padding: 16px 0 0 0;
     transition: min-height 0.4s cubic-bezier(0.4,0,0.2,1);
 }
-
-
-
-
 
 header nav ul {
     transition: padding 0.3s;
@@ -739,7 +733,7 @@ nav li a {
 /* Daily Tips Styles - Calm Version */
 #daily-tip-content {
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(1fr));
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 20px;
     padding: 0; 
 }
@@ -847,7 +841,7 @@ nav li a {
 }
 
 /* Daily Tips Container */
-.container-daily-tips {
+/* .container-daily-tips {
   background-image: image-set(
     url('./backgrounds/homepage_collage.webp') type('image/webp'),
     url('./backgrounds/homepage_collage.png') type('image/png')
@@ -856,8 +850,8 @@ nav li a {
     background-image: url('./backgrounds/homepage_collage.png');
     padding: 20px;
     display: flex;
-    justify-content: center; /* Center the tips box */
-}
+    justify-content: center; 
+} */
 
 /* Daily Tips Box - Reduced Width */
 .flex-item#daily-tips {
