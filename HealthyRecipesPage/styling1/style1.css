@@ -460,10 +460,10 @@ body {
 main {
     background-image: image-set(
     url('./backgrounds1/recipe-collage.webp') type('image/webp'),
-    url('./backgrounds1/recipe-collage.png') type('image/png')
+    url('./backgrounds1/recipe-collage.jpg') type('image/jpg')
   );
   
-    background-image: url('./backgrounds1/recipe-collage.png');
+    background-image: url('./backgrounds1/recipe-collage.jpg');
 }
 
 .pagination {
