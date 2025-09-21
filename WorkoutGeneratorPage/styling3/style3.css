@@ -362,7 +362,7 @@
                 margin-top: 15px;
             }
             
-            .generator-form h1 {
+            .generator-form h2 {
                 font-size: 1.8em;
                 margin-bottom: 20px;
                 text-align: center;
@@ -412,7 +412,7 @@
                 gap: 15px;
             }
             
-            .generator-form h1 {
+            .generator-form h2 {
                 font-size: 1.6em;
                 margin-bottom: 15px;
             }
@@ -504,7 +504,7 @@
                 margin: 0 5px;
             }
             
-            .generator-form h1 {
+            .generator-form h2 {
                 font-size: 1.4em;
             }
             
@@ -666,8 +666,9 @@ main {
     padding: 10px;
 }
 
-.generator-form h1 {
+.generator-form h2 {
     text-align: center;
+    font-size: 2.5rem;
 }
 
 /* Exercise Timer Styles */
