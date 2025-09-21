@@ -254,10 +254,10 @@
 main {
     background-image: image-set(
     url('./backgrounds5/contact-collage.webp') type('image/webp'),
-    url('./backgrounds5/contact-collage.png') type('image/png')
+    url('./backgrounds5/contact-collage.jpg') type('image/jpg')
   );
   
-    background-image: url('./backgrounds5/contact-collage.png');
+    background-image: url('./backgrounds5/contact-collage.jpg');
 }
 
 .map-container {
