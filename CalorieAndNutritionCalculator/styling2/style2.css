@@ -524,3 +524,7 @@ fieldset {
 .footer-section h4 {
     font-size: 2rem;
 }
+
+select option[disabled] {
+  color: #888;
+}
