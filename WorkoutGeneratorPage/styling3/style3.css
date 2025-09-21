@@ -654,10 +654,10 @@
 main {
     background-image: image-set(
     url('./backgrounds3/collage-workouts.webp') type('image/webp'),
-    url('./backgrounds3/collage-workouts.png') type('image/png')
+    url('./backgrounds3/collage-workouts.jpg') type('image/jpg')
   );
   
-    background-image: url('./backgrounds3/collage-workouts.png');
+    background-image: url('./backgrounds3/collage-workouts.jpg');
 }
 
 .generator-form {
