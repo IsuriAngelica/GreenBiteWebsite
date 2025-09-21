@@ -74,7 +74,7 @@ form {
     gap: 10px;
 }
 
-.description-calc.web-supported {
+.description-calc{
   background-image: image-set(
   url('./backgrounds2/apple-measuring-tape.webp') type('image/webp'),
   url('./backgrounds2/apple-measuring-tape.png') type('image/png')
