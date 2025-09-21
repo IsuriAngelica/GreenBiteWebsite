@@ -848,10 +848,9 @@ nav li a {
 
 /* Daily Tips Container */
 .container-daily-tips {
-    background-image: url('./backgrounds1/recipe-collage.png');
   background-image: image-set(
-    url('./backgrounds1/recipe-collage.webp') format('webp'),
-    url('./backgrounds1/recipe-collage.png') format('png')
+    url('./backgrounds/homepage_collage.webp') type('image/webp'),
+    url('./backgrounds/homepage_collage.png') type('image/png')
   );
   
     background-image: url('./backgrounds/homepage_collage.png');

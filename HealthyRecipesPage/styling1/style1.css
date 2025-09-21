@@ -452,13 +452,11 @@ body {
 }
 
 
-main {
-    background-image: image-set(
-    url('./backgrounds1/recipe-collage.webp') type('image/webp'),
-    url('./backgrounds1/recipe-collage.png') type('image/png')
-  );
-  
-    background-image: url('./backgrounds1/recipe-collage.png');
+main.webp-supported {
+    background: url('./backgrounds1/recipe-collage.webp');
+}
+main.no-webp {
+    background: url('./backgrounds1/recipe-collage.png');
 }
 
 .pagination {
