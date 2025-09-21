@@ -20,18 +20,18 @@ const weekSessions = document.getElementById('week-sessions');
 const totalSessions = document.getElementById('total-sessions');
 const clearSessions = document.getElementById('clear-sessions');
 
-let timeLeft = 1500; // 25 minutes in seconds
+let timeLeft = 1500; 
 let timerInterval;
 let breathingInterval;
 let currentBreathPattern = '4-7-8';
 let currentSound = null;
 let sessions = JSON.parse(localStorage.getItem('meditationSessions')) || [];
 
-// Initialize the page
+
 updateTimer();
 updateSessionStats();
 
-// Timer functions
+
 function updateTimer() {
     let minutes = Math.floor(timeLeft / 60);
     let seconds = timeLeft % 60;
@@ -49,7 +49,7 @@ function startTimer() {
             pauseButton.disabled = true;
             timerMessage.textContent = "Time's up! Take a deep breath and relax.";
             
-            // Record the session
+        
             recordSession();
             updateSessionStats();
         }
@@ -71,7 +71,7 @@ function resetTimer() {
     }
 }
 
-// Settings panel functionality
+
 settingsToggle.addEventListener('click', () => {
     settingsPanel.classList.add('open');
     overlay.classList.add('open');
@@ -94,7 +94,7 @@ applySettings.addEventListener('click', () => {
     overlay.classList.remove('open');
 });
 
-// Breathing animation functionality
+
 startBreathing.addEventListener('click', () => {
     startBreathing.disabled = true;
     stopBreathing.disabled = false;
@@ -136,7 +136,7 @@ function startBreathingExercise(pattern) {
     let isInhaling = true;
     let isHolding = false;
     
-    // Initial state
+ 
     breathingCircle.classList.add('inhale');
     breathText.textContent = 'Inhale';
     
@@ -172,17 +172,13 @@ function stopBreathingExercise() {
     breathText.textContent = 'Inhale';
 }
 
-// Ambient sounds functionality with always-visible toggle
+
 const soundToggle = document.getElementById('sound-toggle');
 
-// Set rain as default sound
 let currentSoundType = 'rain';
 
-// Set initial state
 soundToggle.checked = false;
 
-// Initialize with rain sound ready
-// Create audio elements dynamically instead of using HTML
 let rainSound, forestSound;
 
 function createAudioElements() {
@@ -194,7 +190,6 @@ function createAudioElements() {
     forestSound.loop = true;
 }
 
-// Call this when needed, not on page load
 function playSound(soundType) {
     if (!rainSound || !forestSound) {
         createAudioElements();
@@ -215,7 +210,7 @@ function stopAllSounds() {
     }
 }
 
-// Session tracking functionality
+// Session tracking 
 function recordSession() {
     const now = new Date();
     const session = {
@@ -257,7 +252,7 @@ startButton.addEventListener('click', startTimer);
 pauseButton.addEventListener('click', pauseTimer);
 resetButton.addEventListener('click', resetTimer);
 
-// Initialize settings with default values
+
 customMinutes.value = 25;
 
 // Snowflake generation
@@ -344,16 +339,16 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Add this to your existing JavaScript
+
 const soundSelector = document.getElementById('sound-selector');
 
 
 
-// Change sound when selector is used
+
 soundSelector.addEventListener('change', () => {
     currentSoundType = soundSelector.value;
     
-    // If sound is currently playing, switch to new sound
+   
     if (soundToggle.checked) {
         stopAllSounds();
         currentSound = document.getElementById(`${currentSoundType}-sound`);
@@ -395,13 +390,13 @@ soundSelector.addEventListener('change', () => {
 });
 
 
-// Mobile sound controls functionality
+// Mobile sound controls 
 const mobileSoundToggle = document.getElementById('mobile-sound-toggle');
 const mobileSoundPanel = document.getElementById('mobile-sound-panel');
 const mobileSoundToggleCheckbox = document.getElementById('mobile-sound-toggle-checkbox');
 const mobileSoundSelector = document.getElementById('mobile-sound-selector');
 
-// Sync with existing sound controls
+
 if (mobileSoundToggleCheckbox && soundToggle) {
     mobileSoundToggleCheckbox.checked = soundToggle.checked;
 }
@@ -417,12 +412,11 @@ if (mobileSoundToggle && mobileSoundPanel) {
     });
 }
 
-// Update main sound controls when mobile controls change
+
 if (mobileSoundToggleCheckbox && soundToggle) {
     mobileSoundToggleCheckbox.addEventListener('change', () => {
         soundToggle.checked = mobileSoundToggleCheckbox.checked;
-        
-        // Trigger the change event
+     
         const event = new Event('change');
         soundToggle.dispatchEvent(event);
     });
@@ -432,13 +426,13 @@ if (mobileSoundSelector && soundSelector) {
     mobileSoundSelector.addEventListener('change', () => {
         soundSelector.value = mobileSoundSelector.value;
         
-        // Trigger the change event
+ 
         const event = new Event('change');
         soundSelector.dispatchEvent(event);
     });
 }
 
-// Close mobile panel when clicking outside
+
 document.addEventListener('click', (e) => {
     if (mobileSoundPanel && mobileSoundPanel.classList.contains('open') &&
         !mobileSoundPanel.contains(e.target) && 
@@ -449,7 +443,7 @@ document.addEventListener('click', (e) => {
 
 // Emergency fix for hamburger menu close button
 document.addEventListener('DOMContentLoaded', function() {
-    // Wait a bit then bring close button to front
+    
     setTimeout(() => {
         const hamburger = document.querySelector('.hamburger');
         if (hamburger) {

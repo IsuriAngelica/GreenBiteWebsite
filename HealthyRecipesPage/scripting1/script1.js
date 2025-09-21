@@ -10,7 +10,7 @@ const closeModal = document.querySelector('.close-modal');
 let recipes = [];
 let currentPage = 1;
 const recipesPerPage = 4;
-let filteredRecipes = []; // Copy of all recipes
+let filteredRecipes = []; 
 let currentFilter = 'all';
 let currentSearchTerm = '';
 
@@ -21,9 +21,9 @@ async function loadRecipes() {
     return data.recipes;
   } catch (error) {
     console.error('Error loading recipes:', error);
-    // Fallback to hardcoded recipes if JSON fails
+    
     return [
-      // Add some basic recipe objects here as backup
+      
       {
         title: "Sample Recipe",
         description: "A sample recipe for demonstration",
@@ -45,7 +45,7 @@ async function loadRecipes() {
   }
 }
 
-// Initialize your app
+
 async function initialize() {
   recipes = await loadRecipes();
   filteredRecipes = [...recipes];
@@ -68,12 +68,12 @@ function filterRecipes() {
         return categoryMatch && searchMatch;
     });
     
-    // Reset to page 1 when filtering
+   
     currentPage = 1;
     displayRecipes();
 }
 
-// Update displayRecipes to use filteredRecipes
+
 function displayRecipes() {
     recipesContainer.innerHTML = '';
     
@@ -81,7 +81,7 @@ function displayRecipes() {
     const endIndex = startIndex + recipesPerPage;
     const currentRecipes = filteredRecipes.slice(startIndex, endIndex);
     
-    // Show message if no recipes found
+ 
     if (filteredRecipes.length === 0) {
         recipesContainer.innerHTML = `
             <div class="search-results-message">
@@ -101,7 +101,7 @@ function displayRecipes() {
             </div>
           `;
           
-          // Make recipe cards clickable
+       
           recipeElement.addEventListener('click', () => {
             openRecipeModal(recipe);
           });
@@ -110,34 +110,34 @@ function displayRecipes() {
         });
     }
     
-    // Update pagination
+
     const totalPages = Math.ceil(filteredRecipes.length / recipesPerPage);
     pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
     prevBtn.disabled = currentPage === 1;
     nextBtn.disabled = currentPage === totalPages || totalPages === 0;
 }
 
-// Add event listeners for filter buttons
+
 document.querySelectorAll('.filter-btn').forEach(button => {
     button.addEventListener('click', () => {
-        // Update active state
+       
         document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
         
-        // Apply filter
+    
         currentFilter = button.dataset.filter;
         filterRecipes();
     });
 });
 
-// Add event listener for search form
+
 document.getElementById('search-form').addEventListener('submit', (e) => {
     e.preventDefault();
     currentSearchTerm = document.getElementById('search-input').value.toLowerCase();
     filterRecipes();
 });
 
-// Add event listener for search input clear
+
 document.getElementById('search-input').addEventListener('input', (e) => {
     if (e.target.value === '') {
         currentSearchTerm = '';
@@ -145,7 +145,7 @@ document.getElementById('search-input').addEventListener('input', (e) => {
     }
 });
 
-// Add event listeners for pagination buttons
+
 prevBtn.addEventListener('click', () => {
     if (currentPage > 1) {
         currentPage--;
@@ -200,7 +200,7 @@ function openRecipeModal(recipe) {
   modal.style.display = 'block';
 }
 
-// Add event listeners for modal
+
 closeModal.addEventListener('click', () => {
   modal.style.display = 'none';
 });
@@ -214,27 +214,25 @@ window.addEventListener('click', (event) => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Add event listeners for filter buttons
+  
     document.querySelectorAll('.filter-btn').forEach(button => {
         button.addEventListener('click', () => {
-            // Update active state
+       
             document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
-            
-            // Apply filter
+         
             currentFilter = button.dataset.filter;
             filterRecipes();
         });
     });
 
-    // Add event listener for search form
+
     document.getElementById('search-form').addEventListener('submit', (e) => {
         e.preventDefault();
         currentSearchTerm = document.getElementById('search-input').value.toLowerCase();
         filterRecipes();
     });
 
-    // Add event listener for search input clear
     document.getElementById('search-input').addEventListener('input', (e) => {
         if (e.target.value === '') {
             currentSearchTerm = '';
@@ -242,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initialize the application after DOM is loaded
+
     initialize();
 });
 

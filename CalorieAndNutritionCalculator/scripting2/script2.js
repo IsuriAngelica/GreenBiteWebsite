@@ -3,21 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultsContainer = document.getElementById('results-container');
     const backButton = document.getElementById('back-button');
     
-    // Set default radio button to checked
     document.getElementById('male').checked = true;
     
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         
         try {
-            // Get form values
+   
             const age = parseInt(document.getElementById('age').value);
             const gender = document.querySelector('input[name="gender"]:checked').value;
             const height = parseInt(document.getElementById('height').value);
             const weight = parseInt(document.getElementById('weight').value);
             const actLevel = document.getElementById('activity-level').value;
-            
-            // Validate inputs
+
             if (isNaN(age) || isNaN(height) || isNaN(weight)) {
                 alert("Please enter valid numbers for all fields");
                 return;
@@ -74,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const proteinGrams = Math.round((tdee * 0.20) / 4);
             const fatGrams = Math.round((tdee * 0.30) / 9);
             
-            // Display results with animations
+          
             displayResults(Math.round(bmr), Math.round(tdee), carbsGrams, proteinGrams, fatGrams);
         } catch (error) {
             console.error("Error calculating results:", error);
@@ -83,48 +81,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     backButton.addEventListener('click', function() {
-        // Hide results and show form again
+    
         resultsContainer.classList.remove('results-visible');
         resultsContainer.classList.add('results-hidden');
     });
     
     function displayResults(bmr, tdee, carbs, protein, fat) {
-        // Show results container FIRST so the elements are visible for animation
+       
         resultsContainer.classList.remove('results-hidden');
         resultsContainer.classList.add('results-visible');
-        
-        // Reset counters to 0 for the animation
+
         document.getElementById('bmr-result').textContent = '0';
         document.getElementById('tdee-result').textContent = '0';
         document.getElementById('carbs-result').textContent = '0';
         document.getElementById('protein-result').textContent = '0';
         document.getElementById('fat-result').textContent = '0';
         
-        // Reset progress bars to 0
+
         document.querySelectorAll('.progress-fill').forEach(bar => {
             bar.style.width = '0%';
         });
         
-        // Brief delay to allow the browser to render the reset values before animating
         setTimeout(() => {
-            // Animate the BMR and TDEE counters
+            
             animateCounter('bmr-result', bmr, 1500);
             animateCounter('tdee-result', tdee, 1500);
             
-            // Animate the macro counters and progress bars
+            
             animateCounter('carbs-result', carbs, 1500);
             animateCounter('protein-result', protein, 1500);
             animateCounter('fat-result', fat, 1500);
             
-            // Animate the progress bars to their full width
+           
             document.querySelectorAll('.progress-fill').forEach(bar => {
                 const targetWidth = bar.getAttribute('data-percent') + '%';
                 bar.style.width = targetWidth;
             });
             
-        }, 50); // 50ms delay
+        }, 50); 
         
-        // Scroll to results
+        
         resultsContainer.scrollIntoView({ behavior: 'smooth' });
     }
     
@@ -135,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const step = (currentTime) => {
             const elapsedTime = currentTime - startTime;
             if (elapsedTime > duration) {
-                element.textContent = targetValue.toLocaleString(); // Format number with commas
+                element.textContent = targetValue.toLocaleString(); 
                 return;
             }
             const progress = elapsedTime / duration;

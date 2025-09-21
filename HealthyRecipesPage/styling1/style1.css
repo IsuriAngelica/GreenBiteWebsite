@@ -122,7 +122,7 @@ body {
         margin: 0 auto 15px auto;
     }
     .flex-item-recipe {
-        flex-direction: row; /* Keep side-by-side layout */
+        flex-direction: row; 
         text-align: left;
         margin: 10px 0;
         padding: 15px;
@@ -134,9 +134,9 @@ body {
         height: 80px;
         max-width: 80px;
         min-width: 80px;
-        border-radius: 50%; /* Keep circular */
+        border-radius: 50%; 
         margin-right: 15px;
-        object-fit: cover; /* Ensure images don't stretch */
+        object-fit: cover; 
     }
     
     .flex-item-recipe div {
@@ -154,20 +154,20 @@ body {
     .flex-item-recipe {
         flex-direction: column;
         text-align: center;
-        margin: 25px 0; /* Extra spacing for round layout */
+        margin: 25px 0; 
         padding: 25px;
         align-items: center;
     }
     
     .flex-item-recipe img {
-        width: 180px; /* Fixed width for perfect circle */
-        height: 180px; /* Same as width for perfect circle */
+        width: 180px; 
+        height: 180px; 
         max-width: 180px;
-        border-radius: 50%; /* PERFECT CIRCLE! */
-        margin: 0 0 20px 0; /* Space below image */
-        object-fit: cover; /* Crop image to fill circle */
+        border-radius: 50%; 
+        margin: 0 0 20px 0; 
+        object-fit: cover; 
         
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
     }
     
     .flex-item-recipe div {
@@ -204,7 +204,7 @@ body {
     }
     
     .flex-item-recipe img {
-        width: 150px; /* Slightly smaller circle */
+        width: 150px; 
         height: 150px;
         max-width: 150px;
         
@@ -228,7 +228,7 @@ body {
 }
 
 .flex-item-recipe:hover img {
-    transform: scale(1.05); /* Slight grow effect */
+    transform: scale(1.05); 
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 

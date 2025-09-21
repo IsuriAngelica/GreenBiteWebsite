@@ -832,15 +832,15 @@ nav[aria-hidden="false"], nav.active {
 /* Mobile-specific settings button size increase */
 @media (max-width: 768px) {
     .settings-toggle {
-        width: 55px !important;  /* Increased from 35px */
-        height: 55px !important; /* Increased from 35px */
+        width: 55px !important;  
+        height: 55px !important; 
         top: 15px !important;
         right: 15px !important;
     }
     
     .settings-toggle img {
-        width: 35px !important;  /* Increased from 25px */
-        height: 35px !important; /* Increased from 25px */
+        width: 35px !important;  
+        height: 35px !important; 
     }
 
 }

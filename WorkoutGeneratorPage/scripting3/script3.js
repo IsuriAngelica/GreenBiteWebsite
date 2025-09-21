@@ -1,7 +1,6 @@
-// workoutData will store our JSON data
 let workoutData = {};
 
-// Function to log JSON loading status
+
 function logWorkoutDataStatus() {
     console.log("Workout data loaded:", workoutData);
     if (Object.keys(workoutData).length === 0) {
@@ -32,7 +31,7 @@ fetch('./WorkoutGeneratorPage/data/workouts.json')
   })
   .catch(error => {
     console.error('Error loading workout data:', error);
-    // Fallback to a minimal dataset if JSON fails to load
+    // Fallback 
     workoutData = {
       "back": {
         "dumbbells": [
@@ -41,7 +40,7 @@ fetch('./WorkoutGeneratorPage/data/workouts.json')
             "sets": "3", 
             "reps": "10-12", 
             "rest": "60s",
-            "video": "v6bLx0xR_tU" // Example video ID
+            "video": "v6bLx0xR_tU" 
           }
         ]
       },
@@ -52,7 +51,7 @@ fetch('./WorkoutGeneratorPage/data/workouts.json')
             "sets": "3", 
             "reps": "10-12", 
             "rest": "60s",
-            "video": "B-aVuyhvLHU" // Example video ID
+            "video": "B-aVuyhvLHU" 
           }
         ]
       }
@@ -70,21 +69,21 @@ function generateWorkout() {
   console.log("Generating workout for:", bodyPart, "with", equipment);
   console.log("Available data for this combination:", workoutData[bodyPart] && workoutData[bodyPart][equipment]);
   
-  // Check if we have workouts for this combination
+
   if (workoutData[bodyPart] && workoutData[bodyPart][equipment] && 
       workoutData[bodyPart][equipment].length > 0) {
     
     const workouts = workoutData[bodyPart][equipment];
     const randomWorkout = workouts[Math.floor(Math.random() * workouts.length)];
     
-    // Build the workout HTML
+   
     let workoutHTML = `
       <h2>Your custom workout plan</h2>
       <h4>Your ${bodyPart} Workout</h4>
       <div class="workout-content">
     `;
     
-    // Add YouTube video thumbnail if available
+  
     if (randomWorkout.video) {
       workoutHTML += `
         <div class="workout-video">
@@ -121,10 +120,10 @@ function generateWorkout() {
       </div>
     `;
     
-    // Display the workout
+ 
     workoutPlan.innerHTML = workoutHTML;
     
-    // Add event listeners for video functionality
+   
     setupVideoPlayers();
 
     createExerciseTimers([randomWorkout]); 
@@ -139,9 +138,9 @@ function generateWorkout() {
   }
 }
 
-// Function to set up video players
+
 function setupVideoPlayers() {
-  // Get all video thumbnails
+
   const videoThumbnails = document.querySelectorAll('.video-thumbnail');
   
   videoThumbnails.forEach(thumbnail => {
@@ -151,25 +150,25 @@ function setupVideoPlayers() {
     });
   });
   
-  // Close modal functionality
+  
   const modal = document.getElementById('video-modal');
   const closeBtn = document.querySelector('.close');
   
   if (closeBtn) {
     closeBtn.addEventListener('click', function() {
       modal.style.display = 'none';
-      // Stop the video when closing
+      
       const player = document.getElementById('video-player');
       player.innerHTML = '';
     });
   }
   
-  // Close modal when clicking outside
+ 
   if (modal) {
     window.addEventListener('click', function(event) {
       if (event.target === modal) {
         modal.style.display = 'none';
-        // Stop the video when closing
+       
         const player = document.getElementById('video-player');
         player.innerHTML = '';
       }
@@ -177,12 +176,12 @@ function setupVideoPlayers() {
   }
 }
 
-// Function to open video modal
+
 function openVideoModal(videoId) {
   const modal = document.getElementById('video-modal');
   const player = document.getElementById('video-player');
   
-  // Create YouTube iframe
+
   player.innerHTML = `
     <iframe 
       width="100%" 
@@ -194,16 +193,16 @@ function openVideoModal(videoId) {
     </iframe>
   `;
   
-  // Show modal
+
   modal.style.display = 'block';
 }
 
-// Add event listener when the DOM is fully loaded
+
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('workout-button').addEventListener('click', generateWorkout);
 });
 
-// Timer functionality with settings
+
 const startButton = document.getElementById('start');
 const resetButton = document.getElementById('reset');
 const pauseButton = document.getElementById('pause');
@@ -216,7 +215,7 @@ const timerSound = new Audio("./MindfullnessPage/sounds/alarm_sound.mp3");
 
 let exerciseTimers = [];
 let currentExerciseTimer = null;
-let timeLeft = 1500; // 25 minutes in seconds
+let timeLeft = 1500; 
 let timerInterval;
 
 function updateTimer() {
@@ -255,7 +254,7 @@ function resetTimer() {
     if (message) message.remove();
 }
 
-// Event listeners
+
 startButton.addEventListener('click', startTimer);
 pauseButton.addEventListener('click', pauseTimer);
 resetButton.addEventListener('click', resetTimer);
@@ -275,12 +274,12 @@ applyTimer.addEventListener('click', function() {
     }
 });
 
-// Initialize timer display
+
 updateTimer();
 
-// Add this function to create exercise timers
+
 function createExerciseTimers(exercises) {
-    // Clear any existing timers
+   
     exerciseTimers = [];
     
     exercises.forEach((exercise, index) => {
@@ -295,7 +294,7 @@ function createExerciseTimers(exercises) {
     });
 }
 
-// Add this function to start an exercise timer
+//function to start an exercise timer
 function startExerciseTimer(timerIndex) {
     if (currentExerciseTimer) {
         clearInterval(currentExerciseTimer);
@@ -304,7 +303,7 @@ function startExerciseTimer(timerIndex) {
     const timer = exerciseTimers[timerIndex];
     let timeLeft = timer.duration;
     
-    // Create or update timer display
+
     if (!timer.element) {
         timer.element = document.createElement('div');
         timer.element.className = 'exercise-timer';
@@ -321,12 +320,12 @@ function startExerciseTimer(timerIndex) {
             <button class="start-exercise-timer">Start Rest Timer</button>
         `;
         
-        // Insert the timer into the dedicated container
+ 
         const timerContainer = document.getElementById('exercise-timer-container');
-        timerContainer.innerHTML = ''; // Clear any existing timer
+        timerContainer.innerHTML = ''; 
         timerContainer.appendChild(timer.element);
         
-        // Add event listener to the start button
+
         const startButton = timer.element.querySelector('.start-exercise-timer');
         startButton.addEventListener('click', function() {
             startButton.disabled = true;
@@ -339,7 +338,7 @@ function startExerciseTimer(timerIndex) {
     startSound.play().catch(e => console.log("Audio play failed:", e));
 }
 
-// Add this function to handle the countdown
+// handle the countdown
 function startTimerCountdown(timerIndex, timeLeft) {
     const timer = exerciseTimers[timerIndex];
     const timerText = timer.element.querySelector('.timer-text');
@@ -352,35 +351,35 @@ function startTimerCountdown(timerIndex, timeLeft) {
     currentExerciseTimer = setInterval(() => {
         timeLeft--;
         
-        // Update text
+  
         timerText.textContent = formatTime(timeLeft);
         
-        // Update circle animation
+
         const offset = circumference - (timeLeft / totalTime) * circumference;
         timerCircle.style.strokeDashoffset = offset;
         
-        // Change color when under 10 seconds
+
         if (timeLeft <= 10) {
             timerCircle.style.stroke = '#ff4444';
             timerText.style.color = '#ff4444';
             
-            // Beep for last 3 seconds
+    
             if (timeLeft <= 3) {
                 const beep = new Audio("./WorkoutGeneratorPage/sounds3/beep.mp3");
                 beep.play().catch(e => console.log("Audio play failed:", e));
             }
         }
         
-        // Timer complete
+
         if (timeLeft <= 0) {
             clearInterval(currentExerciseTimer);
             timerText.textContent = "Time's up!";
             
-            // Play completion sound
+
             const completeSound = new Audio("./WorkoutGeneratorPage/sounds3/timer-complete.mp3");
             completeSound.play().catch(e => console.log("Audio play failed:", e));
             
-            // Enable next timer if available
+
             if (timerIndex < exerciseTimers.length - 1) {
                 startButton.textContent = "Next Exercise";
                 startButton.disabled = false;
@@ -394,7 +393,7 @@ function startTimerCountdown(timerIndex, timeLeft) {
     }, 1000);
 }
 
-// Helper function to format time
+
 function formatTime(seconds) {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;

@@ -45,20 +45,19 @@
                 feedbacks.push(feedback);
                 localStorage.setItem('feedbacks', JSON.stringify(feedbacks));
                 
-                // Show confirmation message
+                
                 document.getElementById('confirmation').style.display = 'block';
                 
-                // Reset form
+         
                 document.getElementById('feedbackForm').reset();
                 
-                // Hide confirmation after 5 seconds
+              
                 setTimeout(() => {
                     document.getElementById('confirmation').style.display = 'none';
                 }, 5000);
             }
         });
-        
-        // FAQ Accordion
+
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const item = question.parentElement;

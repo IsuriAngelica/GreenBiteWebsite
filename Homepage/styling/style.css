@@ -13,7 +13,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    transform: translateZ(0); /* Hardware acceleration */
+    transform: translateZ(0); 
     backface-visibility: hidden;
     will-change: transform;
     background-color: rgb(232, 255, 247);
@@ -247,7 +247,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center; /* Keep it centered as you had */
+    justify-content: center; 
     color: rgb(14, 62, 45);
     text-align: center;
     position: sticky;
@@ -429,21 +429,7 @@ nav li a {
 }
 
 
-/* Optional: Add overlay when menu is open */
-.menu-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
 
-.menu-overlay.active {
-    display: block;
-}
 
 /* Improved Hero Section Responsiveness */
 .grid-container-hero {
@@ -714,7 +700,6 @@ nav li a {
 
 
 
-/* Ensure content is properly spaced on very small screens */
 @media (max-width: 480px) {
     .hero-content {
         margin: 15px;
@@ -726,7 +711,7 @@ nav li a {
     }
     
     .grid-container-hero {
-        min-height: 70vh; /* Taller on very small screens */
+        min-height: 70vh; 
     }
 }
 
@@ -741,12 +726,12 @@ nav li a {
 .tip-item {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+   
     background:rgb(233, 255, 248);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    /* text-align: center; */
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -782,7 +767,7 @@ nav li a {
     }
     
     .flex-item#daily-tips {
-        width: 95%; /* Slightly more width on mobile */
+        width: 95%; 
         padding: 20px;
         margin: 0 auto;
     }
@@ -869,9 +854,9 @@ nav li a {
 .flex-item#daily-tips {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    max-width: 800px; /* Reduced from full width */
-    width: 90%; /* Takes 90% of container width */
-    margin: 0 auto; /* Center the box */
+    max-width: 800px; 
+    width: 90%; 
+    margin: 0 auto; 
     padding: 30px;
     background-color: rgb(232, 255, 247);
     border-radius: 15px;
@@ -902,7 +887,7 @@ nav li a {
     }
 }
 
-/* Add this to your style.css file - REPLACES the previous fix */
+
 html {
     scroll-behavior: smooth;
 }
@@ -912,21 +897,21 @@ body {
     position: relative;
 }
 
-/* Fix for navbar glitching */
+
 header {
     transform: translateZ(0);
     backface-visibility: hidden;
     will-change: transform;
 }
 
-/* Prevent animation conflicts only on problematic elements */
+
 nav, .hamburger {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
 }
 
-/* Specifically target the quote animation to prevent glitching */
+
 #quote-text {
     transform: translateZ(0);
     will-change: opacity;
@@ -935,7 +920,7 @@ nav, .hamburger {
 /* Consistent scroll behavior */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Account for sticky header */
+    scroll-padding-top: 100px; 
 }
 
 /* Prevent scroll jank */
@@ -953,7 +938,7 @@ nav, .hamburger, header, .logo {
 
 /* Simplify will-change usage */
 header {
-    will-change: transform; /* Only what's necessary */
+    will-change: transform; 
 }
 
 nav {

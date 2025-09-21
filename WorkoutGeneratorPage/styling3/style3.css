@@ -792,7 +792,7 @@ main {
     }
     
     #exercise-timer-container {
-        flex: 1 0 100%; /* Full width on its own row */
+        flex: 1 0 100%; 
         margin-top: 20px;
     }
     

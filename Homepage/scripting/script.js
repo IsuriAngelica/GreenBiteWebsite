@@ -6,7 +6,7 @@ const healthQuotes = [
     "\"To enjoy the glow of good health, you must exercise. - Gene Tunney\""
 ];
 
-// Only run quote animation if the element exists (homepage only)
+
 const quoteTextElement = document.getElementById('quote-text');
 if (quoteTextElement) {
     let currentQuoteIndex = 0;
@@ -74,15 +74,14 @@ if (hamburger && nav) {
         body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
     });
     
-    // Close menu when clicking on overlay
+
     overlay.addEventListener('click', function() {
         hamburger.classList.remove('active');
         nav.classList.remove('active');
         this.classList.remove('active');
         body.style.overflow = '';
     });
-    
-    // Close menu when clicking on links
+
     const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -97,7 +96,6 @@ if (hamburger && nav) {
 
 //daily tip part
 
-// Four daily tips that change throughout the day
 const tipSets = [
     // Set 1
     [
@@ -140,21 +138,21 @@ function showDailyTips() {
     const tipContainer = document.getElementById('daily-tip-content');
     if (!tipContainer) return;
     
-    // Get day of the year to select which set to show
+  
     const now = new Date();
     const start = new Date(now.getFullYear(), 0, 0);
     const diff = now - start;
     const oneDay = 1000 * 60 * 60 * 24;
     const dayOfYear = Math.floor(diff / oneDay);
     
-    // Select tip set based on day of year
+  
     const tipSetIndex = dayOfYear % tipSets.length;
     const dailyTips = tipSets[tipSetIndex];
     
-    // Clear previous tips
+
     tipContainer.innerHTML = '';
     
-    // Add all 4 tips from the selected set
+   
     dailyTips.forEach(tip => {
         const tipElement = document.createElement('div');
         tipElement.className = 'tip-item';
@@ -166,18 +164,17 @@ function showDailyTips() {
     });
 }
 
-// Initialize when DOM is loaded
+
 document.addEventListener('DOMContentLoaded', function() {
     showDailyTips();
 });
 
-// Newsletter subscription functionality
+
 document.addEventListener('DOMContentLoaded', function() {
     const newsletterForm = document.getElementById('newsletter-form');
     const emailInput = document.getElementById('newsletter-email');
     const subscriptionMessage = document.getElementById('subscription-message');
-    
-    // Check if user is already subscribed
+
     const subscribedEmail = localStorage.getItem('newsletterSubscribed');
     if (subscribedEmail) {
         subscriptionMessage.textContent = `You're subscribed with: ${subscribedEmail}`;
@@ -190,19 +187,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = emailInput.value.trim();
         
         if (validateEmail(email)) {
-            // Store email in localStorage
+            
             localStorage.setItem('newsletterSubscribed', email);
             
-            // Show success message
             subscriptionMessage.textContent = 'Thank you for subscribing!';
-            subscriptionMessage.style.color = '#90EE90'; // Light green
+            subscriptionMessage.style.color = '#90EE90'; 
             
-            // Clear input
             emailInput.value = '';
         } else {
-            // Show error message
+           
             subscriptionMessage.textContent = 'Please enter a valid email address.';
-            subscriptionMessage.style.color = '#FF6B6B'; // Light red
+            subscriptionMessage.style.color = '#FF6B6B'; 
         }
     });
     

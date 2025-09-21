@@ -101,14 +101,14 @@ input, select{
     box-sizing: border-box;
 }
 
-/* body {
+body {
     background-image: image-set(
     url('./backgrounds2/calc-background-collage.webp') type('image/webp'),
     url('./backgrounds2/calc-background-collage.png') type('image/png')
   );
   
     background-image: url('./backgrounds2/calc-background-collage.png');
-} */
+}
 
 .flex-items-calc {
     display: flex;
@@ -230,7 +230,7 @@ fieldset {
 }
 
 /* ========== MOBILE RESPONSIVENESS ========== */
-/* This will only change things on mobile screens */
+
 @media (max-width: 768px) {
     .grid-container-calc {
         grid-template-columns: 1fr;
