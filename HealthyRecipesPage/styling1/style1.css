@@ -17,10 +17,14 @@
     border-radius: 10px;
 }
 
-.grid-item-left h1,
+.grid-item-left h2,
 .grid-item-left p,
 .grid-item-left img {
     padding: 10px;
+}
+
+.grid-item-left h2 {
+    font-size: 2rem;
 }
 
 .grid-item-left img {
@@ -452,11 +456,14 @@ body {
 }
 
 
-main.webp-supported {
-    background: url('./backgrounds1/recipe-collage.webp');
-}
-main.no-webp {
-    background: url('./backgrounds1/recipe-collage.png');
+
+main {
+    background-image: image-set(
+    url('./backgrounds1/recipe-collage.webp') type('image/webp'),
+    url('./backgrounds1/recipe-collage.png') type('image/png')
+  );
+  
+    background-image: url('./backgrounds1/recipe-collage.png');
 }
 
 .pagination {
